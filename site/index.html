@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Basic American Enterprises · Distribution and capital for American companies</title>
+<meta name="description" content="Basic American Enterprises builds a network of reps in every state, then raises smart money for the companies they carry. Distribution first, capital second.">
+<link rel="icon" href="assets/bae-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/bae.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Basic American Enterprises"><img src="assets/bae-logo.png" alt="Basic American Enterprises"></a>
+    <div class="meta">
+      <div><strong>Long Beach, California</strong><span id="clock">—</span></div>
+      <div><strong>fran@basicamericanenterprises.com</strong><span>562-573-3200</span></div>
+    </div>
+    <div class="spacer"></div>
+    <a class="btn btn-blue cta" href="#map">Find your state</a>
+    <button class="menu-btn" id="menuOpen" aria-label="Open menu"><span class="bars"><i></i><i></i><i></i></span> Menu</button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="close" id="menuClose" aria-label="Close menu">×</button>
+  <nav>
+    <a href="#map" class="r">The map</a>
+    <a href="#reps" class="r">Become a rep</a>
+    <a href="#capital" class="b">Smart money</a>
+    <a href="#team">Senior team</a>
+    <a href="#portfolio" class="b">Portfolio</a>
+    <a href="#family">The family</a>
+    <a href="#talk">Let's talk</a>
+  </nav>
+</div>
+
+<main id="top">
+
+<!-- HERO (shorter, so the map shows on the first screen) -->
+<section class="hero">
+  <div class="bg"><img src="assets/hero-flag-table-b.png" alt=""></div>
+  <div class="wrap">
+    <div class="top">
+      <div class="pitch">
+        <span class="eyebrow">Invest in American business</span>
+        <h1 id="heroLine">A network of reps in every state, and smart money behind the companies they carry.</h1>
+      </div>
+      <div class="slide" id="slide">
+        <div class="face"><img id="slideImg" src="assets/distribution.png" alt=""><div><b id="slideTitle">Reps</b><span id="slideSub">Fifty states, three regions</span></div></div>
+        <div class="row"><span id="slideCount">01/03</span><button class="next" id="slideNext" aria-label="Next">→</button></div>
+      </div>
+    </div>
+
+    <div class="wordmark display" aria-label="Basic American">
+      <span class="line"><span class="stars">★</span> BASIC</span>
+      <span class="line">AMERICAN</span>
+    </div>
+
+    <div class="bottom">
+      <p><b>Hard work, logic, faith and excellence is our mission.</b> Two halves, in this order: distribution, then capital.</p>
+      <div class="chips"><span class="chip red">01 · Distribution</span><span class="chip blue">02 · Capital</span></div>
+    </div>
+    <div class="actions">
+      <a class="btn btn-blue" href="#map"><span class="ico">↓</span> Find your state</a>
+      <a class="btn btn-ghost" href="#capital"><span class="ico">→</span> Smart money</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART ONE: DISTRIBUTION ============ -->
+<div class="part red" id="distribution">
+  <div class="wrap"><span class="pn">Part one</span><span class="pt display">Distribution</span><span class="pl"></span></div>
+</div>
+
+<!-- THE MAP: the feature of the page -->
+<section class="mapsec feature" id="map">
+  <div class="wrap">
+    <div class="map-head">
+      <div>
+        <span class="eyebrow">The rep map</span>
+        <h2 class="h2 display">50 key people in 50 key markets</h2>
+      </div>
+      <p class="lead">Three regions, a regional lead in each, a master rep in every state with sub-agents under them. Every state is open today. Point at a state, then tap or click it.</p>
+    </div>
+    <div class="grid">
+      <div class="usmap">
+        <svg id="usSvg" viewBox="0 0 959 593" role="img" aria-label="Map of the United States in three regions. Click a state."></svg>
+        <div class="map-tip" id="mapTip" aria-hidden="true"></div>
+        <div class="regions">
+          <button class="west" data-region="west">West<small>Long Beach, CA</small></button>
+          <button class="central" data-region="central">Central<small>Austin, TX</small></button>
+          <button class="east" data-region="east">East<small>Philadelphia, PA</small></button>
+        </div>
+      </div>
+      <aside class="statepanel" id="statePanel">
+        <span class="tag">Select a state</span>
+        <h3 id="spName">All 50 states</h3>
+        <div class="rows">
+          <div class="row"><span>Region</span><b id="spRegion"><span class="dot west"></span>West <span class="dot central"></span>Central <span class="dot east"></span>East</b></div>
+          <div class="row"><span>Regional office</span><b id="spOffice">Long Beach · Austin · Philadelphia</b></div>
+          <div class="row"><span>Regional lead</span><b id="spLead">Open</b></div>
+        </div>
+        <div class="replist">
+          <span class="label" id="spRepsLabel">Reps in this state</span>
+          <ul id="spReps"><li class="empty">Open territory. Be the first.</li></ul>
+        </div>
+        <p id="spNote">Click any state to see its reps and sign up for it.</p>
+        <button class="btn btn-blue" data-note="rep"><span class="ico">→</span> <span id="spCta">Sign up as a rep</span></button>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- THE REP PROGRAM -->
+<section class="about reps" id="reps">
+  <div class="wrap grid">
+    <div class="photo rv"><img src="assets/distribution.png" alt="A rep meeting a business owner"></div>
+    <div class="copy rv-kids">
+      <span class="eyebrow">Become a rep</span>
+      <h2 class="statement">Offer <span class="red">every product</span> Basic American Enterprises represents. Earn on every customer.</h2>
+      <p class="lead">Reps earn subscription and referral commissions on the customers they bring to these products. Paid electronically, every month, under a rep agreement.</p>
+      <div class="owed small">
+        <span class="owed-tag">Waiting on Fran</span>
+        <p><b>The rep tagline,</b> and Fran's written distribution piece. Both replace the copy here.</p>
+      </div>
+      <div class="foot">
+        <p class="mission"><b>Built for people who own their territory.</b></p>
+        <button class="btn btn-blue" data-note="rep"><span class="ico">→</span> Sign up as a rep</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO + STRUCTURE -->
+<section class="voice">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Who we are looking for</span>
+      <h2 class="h2 display">Salespeople and agents</h2>
+      <span class="count">3 levels</span>
+    </div>
+    <div class="who-grid rv-kids">
+      <div class="who-card">
+        <span class="label">The ideal rep</span>
+        <p class="big">An American business salesperson or independent agent who wants to be part of cutting-edge capabilities, united under the Basic American program.</p>
+        <ul>
+          <li>A tech sales or business background</li>
+          <li>Experience setting up area distribution</li>
+          <li>Experience in capital formation</li>
+          <li>People who take your call: a real network in your market</li>
+        </ul>
+      </div>
+      <div class="tree">
+        <span class="label">How the network is built</span>
+        <div class="lvl l1"><b>Regional lead</b><span>One per region: West, Central, East</span></div>
+        <div class="lvl l2"><b>Master rep</b><span>One per state. Heads the state</span></div>
+        <div class="lvl l3"><b>Sub-agents</b><span>Under each master, across the state</span></div>
+        <p class="tree-note">Each rep sees the leads in their own territory. Every customer is tagged to the rep who brought them in.</p>
+      </div>
+    </div>
+    <div class="trio rv-kids">
+      <div class="step"><span class="k">01</span><h3>Network reps</h3><p>Handshakes, meetings and trade shows in their own state. This program is built for them: own Texas, own Wisconsin.</p></div>
+      <div class="step"><span class="k">02</span><h3>Social media reps</h3><p>Sell from anywhere, no territory needed. Also welcome. Many network reps will be both.</p></div>
+      <div class="step"><span class="k">03</span><h3>We run your posting</h3><p>Our Studio writes and schedules your social media under your name, so your influence reaches your corner of the world.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT REPS OFFER -->
+<section class="carry">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What a rep offers</span>
+      <h2 class="h2 display">Every product we represent</h2>
+      <span class="count">More as they join</span>
+    </div>
+    <div class="lines rv-kids">
+      <article class="line-card"><div class="art"><img src="assets/logo-cta.png" alt="Custom Tailored Agents"></div><h3>Custom Tailored Agents</h3><p>AI systems for small businesses: a CRM, a phone receptionist, a website and social media that runs itself.</p><span class="who">Sold to: small business owners</span></article>
+      <article class="line-card"><div class="art"><img src="assets/logo-clearinsights.png" alt="Clear Insights AI"></div><h3>Clear Insights AI</h3><p>Finds the gaps in a company's pricing and margins.</p><span class="who">Sold to: established companies</span></article>
+      <article class="line-card"><div class="art"><img src="assets/logo-iotdatagroup.png" alt="IoT Data Group"></div><h3>IoT Data Group</h3><p>Thirty years of telecom and technology relationships, put to work.</p><span class="who">Sold to: businesses that buy telecom</span></article>
+      <article class="line-card"><div class="art lt"><img src="assets/logo-ipost.png" alt="iPost Sports"></div><h3>iPost Sports</h3><p>Young athletes stream, record and promote themselves.</p><span class="who">Sold to: leagues, schools and athletic directors</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- BECOME A REP -->
+<section class="process" id="join">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How to start</span>
+      <h2 class="h2 display">From sign-up to first sale</h2>
+      <span class="count">4 steps</span>
+    </div>
+    <div class="cards rv-kids">
+      <div class="card"><div class="tab"><i></i><small>//01</small> Pick your state</div><div class="pane"><div class="dots"><i></i><i></i><i></i></div><p>Click your state on the map and sign up: your market, what you sell today, and who you know.</p></div></div>
+      <div class="card"><div class="tab"><i></i><small>//02</small> A call with Fran</div><div class="pane"><div class="dots"><i></i><i></i><i></i></div><p>Pick a time on Fran's calendar. Screening happens on the call, not on a website.</p></div></div>
+      <div class="card"><div class="tab"><i></i><small>//03</small> Your seat and course</div><div class="pane"><div class="dots"><i></i><i></i><i></i></div><div class="pic"><img src="assets/smart-companies-light.png" alt=""></div><p>A rep agreement, your seat in the CRM (your rep portal) and short videos on how to use it.</p></div></div>
+      <div class="card"><div class="tab"><i></i><small>//04</small> Use it, then sell it</div><div class="pane"><div class="dots"><i></i><i></i><i></i></div><div class="pic"><img src="assets/close-together.png" alt=""></div><p>Run it for your own business first. Then take it to your market. Paid monthly.</p></div></div>
+    </div>
+    <div class="join-cta rv">
+      <p><b>Every state is open.</b> The first master rep in each state sets the bar.</p>
+      <a class="btn btn-blue" href="#map"><span class="ico">↑</span> Find your state</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART TWO: CAPITAL ============ -->
+<div class="part blue" id="capital">
+  <div class="wrap"><span class="pn">Part two</span><span class="pt display">Capital</span><span class="pl"></span></div>
+</div>
+
+<!-- SMART MONEY -->
+<section class="about capital">
+  <div class="wrap grid">
+    <div class="photo rv"><img src="assets/fund-together.png" alt="An investor and a founder shaking hands"></div>
+    <div class="copy rv-kids">
+      <span class="eyebrow blue">Smart money</span>
+      <h2 class="statement"><span class="blue">Smart money</span> is investment from businesses whose interests line up with the company raising it.</h2>
+      <p class="lead">A strategic investor brings more than capital. They bring customers, a channel and a reason to want the company to win. Every company in our portfolio is open to smart money.</p>
+      <div class="owed small">
+        <span class="owed-tag">Waiting on Fran</span>
+        <p><b>Fran's written capital section.</b> It replaces this copy.</p>
+      </div>
+      <div class="foot">
+        <p class="mission"><b>Smart money meets smart companies.</b> We make the match.</p>
+        <button class="btn btn-blue" data-note="invest"><span class="ico">→</span> Talk to Fran</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMART MONEY EXAMPLES -->
+<section class="examples">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow blue">What it looks like</span>
+      <h2 class="h2 display">The right investor for each company</h2>
+      <span class="count">3 examples</span>
+    </div>
+    <div class="ex-grid rv-kids">
+      <article class="ex"><div class="art lt"><img src="assets/logo-ipost.png" alt="iPost Sports"></div><h3>iPost Sports</h3><span class="label">Smart money comes from</span><ul><li>Sports apparel makers</li><li>Sporting goods manufacturers</li><li>Energy drink companies</li><li>Owners and operators of those businesses</li></ul></article>
+      <article class="ex"><div class="art"><img src="assets/logo-iotdatagroup.png" alt="IoT Data Group"></div><h3>IoT Data Group</h3><span class="label">Smart money comes from</span><ul><li>Telecommunications providers</li><li>Systems integrators</li><li>Low voltage contractors</li></ul></article>
+      <article class="ex"><div class="art"><img src="assets/logo-cta.png" alt="Custom Tailored Agents"></div><h3>Custom Tailored Agents</h3><span class="label">Smart money comes from</span><ul><li>A private equity group that runs the system across its portfolio companies</li><li>It shapes the product to its needs, then it serves every group like it</li></ul></article>
+    </div>
+    <div class="story rv">
+      <span class="label">The model</span>
+      <p>Intel built its own CRM instead of paying for Salesforce licenses. Once it worked, the team that built it spun out as InsideSales.com, which Salesforce later bought. <b>That was a strategic investment.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- INCUBATION -->
+<section id="incubate">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow blue">Incubation</span>
+      <h2 class="h2 display">The work founders never get to</h2>
+      <span class="count">4 parts</span>
+    </div>
+    <div class="acc rv-kids" id="acc">
+      <div class="item open">
+        <button class="head" aria-expanded="true"><span class="num">01.</span><span class="title">We set up distribution</span><span class="plus">+</span></button>
+        <div class="body"><div><p>The rep network carries the product state by state, with lead generation behind it. Leads go to the company. Few incubators can do this. It is the first half of this page.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="head" aria-expanded="false"><span class="num">02.</span><span class="title">We raise the capital</span><span class="plus">+</span></button>
+        <div class="body"><div><p>When a company wants to scale, we raise smart money for it and present it in major cities. Our reps open the doors: they know who the strategic investors are in their market.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="head" aria-expanded="false"><span class="num">03.</span><span class="title">We put you on the air</span><span class="plus">+</span></button>
+        <div class="body"><div><p>Basic American Intelligence, our AI media center, puts founders on its podcast and webinars, so the people who build the product can speak for it.</p></div></div>
+      </div>
+      <div class="item">
+        <button class="head" aria-expanded="false"><span class="num">04.</span><span class="title">One system for every company</span><span class="plus">+</span></button>
+        <div class="body"><div><p>Every company in the portfolio runs on a Custom Tailored Agents CRM and second brain. In return for this work, Basic American Enterprises takes a share of the company.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM (the live site puts the team before the portfolio) -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow blue">Senior team</span>
+      <h2 class="h2 display">People who have done it</h2>
+      <span class="count">4 people</span>
+    </div>
+    <div class="grid rv-kids">
+      <article class="person"><div class="photo"><img src="assets/fran-mcgrath.webp" alt="Fran McGrath"></div><div><h3>Fran McGrath</h3><span class="role">Chairman</span></div><p>Serial entrepreneur. Led Aspen Electronics to a sale to a public company in 2001, then founded Color Broadband and sold it to a NASDAQ company in 2012. Co-founder of iPost Sports.</p></article>
+      <article class="person"><div class="photo"><img src="assets/zack-zeiler.jpg" alt="Zack Zeiler"></div><div><h3>Zack Zeiler</h3><span class="role">Director</span></div><p>Founded Visual Perspectives, an early full-service digital and omnichannel agency. Led brand programs for Strawberry Shortcake, mary-kateandashley and the CDC's VERB campaign.</p></article>
+      <article class="person"><div class="photo"><img src="assets/louis-hayner.png" alt="Louis Hayner"></div><div><h3>Louis Hayner</h3><span class="role">Director</span></div></article>
+      <article class="person"><div class="photo"><img src="assets/tom-purcell.jpg" alt="Tom Purcell"></div><div><h3>Tom Purcell</h3><span class="role">Director</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO: one clean logo grid -->
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow blue">Portfolio</span>
+      <h2 class="h2 display">Innovation creates deal flow</h2>
+      <span class="count">All open to smart money</span>
+    </div>
+    <div class="logo-grid rv-kids">
+      <figure class="lg"><div class="tile"><img src="assets/logo-ipost.png" alt="iPost Sports"></div><figcaption>iPost Sports</figcaption></figure>
+      <figure class="lg"><div class="tile"><img src="assets/logo-iotdatagroup.png" alt="IoT Data Group"></div><figcaption>IoT Data Group</figcaption></figure>
+      <figure class="lg"><div class="tile"><img src="assets/logo-cta.png" alt="Custom Tailored Agents"></div><figcaption>Custom Tailored Agents</figcaption></figure>
+      <figure class="lg"><div class="tile"><img src="assets/logo-ban-color.jpg" alt="Basic American Networks"></div><figcaption>Basic American Networks</figcaption></figure>
+      <figure class="lg"><div class="tile"><img src="assets/logo-blockbattery.png" alt="Block Battery"></div><figcaption>Block Battery</figcaption></figure>
+      <figure class="lg"><div class="tile"><img src="assets/logo-clearinsights.png" alt="Clear Insights AI"></div><figcaption>Clear Insights AI</figcaption></figure>
+      <figure class="lg"><div class="tile"><img src="assets/logo-blackmp.png" alt="BlackMP"></div><figcaption>BlackMP</figcaption></figure>
+      <figure class="lg you"><a class="tile" href="#doors"><span class="word">Your company here</span></a><figcaption>Smart companies apply</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TWO DOORS -->
+<section class="doors" id="doors">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow blue">Two doors</span>
+      <h2 class="h2 display">Smart money. Smart companies.</h2>
+      <span class="count">Pick yours</span>
+    </div>
+    <div class="pair rv-kids">
+      <div class="door blue">
+        <span class="kicker">For investors</span>
+        <h3><span class="u">Smart money</span></h3>
+        <p>For businesses and accredited investors whose interests line up with a company in the portfolio.</p>
+        <span class="label">What you get</span>
+        <ul>
+          <li>A company you understand, in your own industry</li>
+          <li>A rep network selling it state by state</li>
+          <li>A seat at the table as it grows</li>
+        </ul>
+        <button class="btn btn-blue" data-note="invest"><span class="ico">→</span> Book a call with Fran</button>
+      </div>
+      <div class="door red">
+        <span class="kicker">For founders</span>
+        <h3><span class="u">Smart companies</span></h3>
+        <p>For founders with an innovative product who need a channel and capital, and would rather keep building.</p>
+        <span class="label">What you get</span>
+        <ul>
+          <li>Reps in fifty states carrying your product</li>
+          <li>Smart money raised for you when you scale</li>
+          <li>A spot on the Basic American Intelligence podcast</li>
+          <li>A CRM and second brain from day one</li>
+        </ul>
+        <button class="btn btn-ghost" data-note="apply"><span class="ico">→</span> Bring us your company</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY OF BRANDS -->
+<section class="family" id="family">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The family of brands</span>
+      <h2 class="h2 display">One parent, three names</h2>
+      <span class="count">2 coming soon</span>
+    </div>
+    <div class="brands rv-kids">
+      <div class="brand here"><div class="art lt"><img src="assets/bae-logo.png" alt="Basic American Enterprises"></div><h3>Basic American Enterprises</h3><p>The parent. Distribution and capital. BAE represents and sells every product.</p><span class="status">You are here</span></div>
+      <div class="brand"><div class="art ph"><span class="word">BAI</span><span class="owed-tag">New logo in progress</span></div><h3>Basic American Intelligence</h3><p>The AI media center: a podcast, webinars and an open forum for people building with AI.</p><button class="soon" data-note="bai">Coming soon</button></div>
+      <div class="brand"><div class="art lt"><img src="assets/logo-ban-color.jpg" alt="Basic American Networks"></div><h3>Basic American Networks</h3><p>Telecom and technology, carried by telecom agents.</p><button class="soon" data-note="ban">Coming soon</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close-sec" id="talk">
+  <div class="wrap">
+    <div class="box rv">
+      <img src="assets/close-together.png" alt="">
+      <div class="inner">
+        <span class="eyebrow">Let's talk</span>
+        <h2 class="h2 display">Tell us what's on your mind</h2>
+        <p class="lead">Reps, investors, manufacturers, service providers: tell us what you have in mind. Let's get coffee, or do a podcast.</p>
+        <div class="actions">
+          <a class="btn btn-blue" href="tel:+15625733200"><span class="ico">☎</span> 562-573-3200</a>
+          <a class="btn btn-ghost" href="mailto:fran@basicamericanenterprises.com"><span class="ico">@</span> Email Fran</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <img src="assets/bae-logo.png" alt="Basic American Enterprises">
+      <nav><a href="#map">The map</a><a href="#reps">Become a rep</a><a href="#capital">Smart money</a><a href="#team">Team</a><a href="#portfolio">Portfolio</a><a href="#family">Family</a></nav>
+      <div class="contact"><a href="tel:+15625733200">562-573-3200</a><a href="mailto:fran@basicamericanenterprises.com">fran@basicamericanenterprises.com</a><span>Long Beach, California</span></div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Basic American Enterprises LLC. Hard work, logic, faith and excellence.</span>
+      <span>This website is for information only. Nothing here is an offer to sell, or a solicitation of an offer to buy, any security. Any offering is made only to qualified investors through official documents. (Draft wording for Fran's attorney.)</span>
+      <span>Concept draft, round three, for Fran's review · built by Custom Tailored Agents · sample copy, not final.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-banner">Concept draft · not live · nothing on this page sends</div>
+
+<dialog class="note" id="note">
+  <h3 id="noteTitle">On the real site</h3>
+  <p id="noteBody"></p>
+  <div class="actions"><button class="btn btn-ghost" id="noteClose">Close</button></div>
+</dialog>
+
+<script src="assets/us-states.js"></script>
+<script src="assets/bae.js"></script>
+</body>
+</html>

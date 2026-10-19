@@ -1,0 +1,9 @@
+I'm Fran McGrath. This folder is the draft website for Basic American Enterprises. Sam Briones at Custom Tailored Agents built the first three rounds with me, and I'm taking it from here.
+
+Please do this first:
+1. Read CLAUDE.md and PROJECT-CONTEXT.md in this folder. They hold the decisions from my calls with Sam and the design rules to keep.
+2. Start the site locally (python -m http.server 8821 --directory site) and open it so I can see it.
+3. Give me a short summary: what the page has now, and the list of what is still open (the amber "Waiting on Fran" boxes).
+4. If I have a second brain or memory set up, save a short note there that this project exists, where this folder is, and to read PROJECT-CONTEXT.md first.
+
+Then wait for my changes. Keep to the rules in CLAUDE.md, show me each change in the browser, and keep PROJECT-CONTEXT.md up to date as we decide things.

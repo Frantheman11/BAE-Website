@@ -66,6 +66,7 @@ can continue the work without having heard them.
 | 1 | 2026-10-01 | First concept, investor-first, rebuilt on a light base the same night |
 | 2 | 2026-10-14 | Distribution first (red), capital second (blue) |
 | 3 | 2026-10-14 | Fran's answers to the 14 questions. Map moved right under the hero. Live-site order. Three logo options |
+| 4 | 2026-10-19 | Claude, for Fran's review (see `ROUND-FOUR.md`): phone fix, Louis and Tom bios, BAN product card, lighter images, link previews |
 
 ## Still open
 

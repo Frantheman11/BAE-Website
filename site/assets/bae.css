@@ -506,3 +506,9 @@ dialog.note .actions { margin-top: 20px; display: flex; gap: 10px; justify-conte
 
 /* Round four (2026-10-19): the wordmark spilled past the right edge at 390 px; the round-three clamp() overrode the phone size */
 @media (max-width: 760px) { .hero .wordmark { font-size: 12.8vw; } }
+/* Round four: five product cards (Basic American Networks added) without a lone card on its own row */
+.lines { grid-template-columns: repeat(5, 1fr); }
+.lines .line-card p { hyphens: auto; }
+@media (max-width: 1100px) { .lines { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .lines { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .lines { grid-template-columns: 1fr; } }

@@ -49,6 +49,7 @@ can continue the work without having heard them.
 | Family of brands | Removed the "One parent, three names" section and its menu and footer links (Fran, 2026-10-19). BAI and BAN still appear elsewhere on the page |
 | Two looks (direction) | Distribution half keeps the all-American look of the hero (flag, red, white, blue). Capital half moves to a California-coast look: Big Sur and Malibu, ocean, rugged cliffs, trees, beaches; power and money, replacing the office stock photos. Still a light site. (Fran, 2026-10-19) |
 | Map and draft banner | Fran is not keen on the dark US map tile or the black "Concept draft, not live" banner; leave both for now while Fran thinks it over (2026-10-19) |
+| Capital section | Fran's written capital section is a graphic, not paragraphs: "Three core ingredients. One company." Three linked circles in a row, Foundership (red), Capital (blue), Management (black), on a "A company built to scale" badge. Fran's words: we appraise foundership, capital and management; evaluate the management and the plan; create the org chart and structure; open the door for smart money. "Core ingredients", not "strengths" or "pillars": pillars are a separate idea Fran will introduce later. Avoid two-up, one-down circles (looked like Mickey) (Fran, 2026-10-19) |
 
 ## Design rules (keep these)
 
@@ -74,7 +75,7 @@ can continue the work without having heard them.
 ## Still open
 
 - The rep tagline (Become a rep section). Fran writes it.
-- Fran's written "distribution" piece and his capital section. Each one replaces our draft copy.
+- Fran's written "distribution" piece (the capital section is done: three core ingredients, 2026-10-19).
 - The logo pick (A, B, C or a mix). Then make it a clean SVG for the nav, footer and browser tab.
 - One-line descriptions for BAN, Block Battery and BlackMP in the portfolio.
 - The amber dashed "Waiting on Fran" boxes on the page mark each gap. Remove a box when its text lands.

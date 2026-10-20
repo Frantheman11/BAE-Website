@@ -527,3 +527,25 @@ dialog.note .actions { margin-top: 20px; display: flex; gap: 10px; justify-conte
 /* Phones and tablets do not support a fixed backdrop well */
 @media (hover: none), (max-width: 760px) { .coast::before { background-attachment: scroll; } }
 .close-sec .box img { object-position: 65% 90%; }
+
+/* Round four: Fran's capital section, three core ingredients (2026-10-19).
+   Three linked circles in a row: each stands alone, the overlaps show one company. Red, blue and black on white. */
+.ingr { margin-top: clamp(56px, 7vw, 96px); }
+.ingr .h2 { font-weight: 900; font-variation-settings: "wdth" 125; }
+.ingr .sub { color: var(--mute); font-size: 18px; max-width: 60ch; margin: 8px 0 40px; }
+.ingr-row { display: flex; justify-content: center; align-items: center; max-width: 1000px; margin: 0 auto; }
+.ingr-c { position: relative; flex: 0 0 37%; aspect-ratio: 1; border-radius: 50%; border: 7px solid var(--c); margin: 0 -2.2%;
+  background: rgba(255,255,255,.62); display: grid; place-items: center;
+  box-shadow: 0 14px 40px rgba(14,15,19,.18), inset 0 0 0 2px rgba(255,255,255,.9); }
+.i1 .ingr-t { transform: translateX(-5%); } .i3 .ingr-t { transform: translateX(5%); }
+.ingr-t { text-align: center; display: grid; justify-items: center; gap: 8px; padding: 0 16%; }
+.ingr-t .display { font-weight: 900; font-variation-settings: "wdth" 125; font-size: clamp(14px, 1.9vw, 23px); line-height: 1; color: var(--ink); }
+.ingr-t .bar { width: 48px; height: 6px; border-radius: 3px; background: var(--c); }
+.ingr-t p { margin: 0; font-size: clamp(13px, 1.4vw, 16px); font-weight: 600; color: var(--mute); max-width: 16ch; }
+.ingr-core { display: flex; justify-content: center; margin-top: 28px; }
+.ingr-core span { background: var(--ink); color: #fff; border-radius: 999px; padding: 14px 24px; font-family: var(--display); font-variation-settings: "wdth" 125;
+  font-weight: 900; font-size: clamp(12px, 1.5vw, 16px); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 0 0 0 4px #fff, 0 10px 30px rgba(14,15,19,.35); }
+.ingr-core i { font-style: normal; color: var(--red); }
+@media (max-width: 640px) { .ingr-row { flex-direction: column; } .ingr-c { flex: none; width: min(78vw, 300px); margin: -7% 0; }
+  .i1 { margin-top: 0; } .i1 .ingr-t, .i3 .ingr-t { transform: none; } .ingr-t .display { font-size: 22px; } .ingr-core { margin-top: 30px; } }

@@ -18,3 +18,4 @@ Custom Tailored Agents (Sam Briones) built rounds one to three. Fran now continu
 - Do not publish or change DNS without Fran saying so. Tell Sam before going live.
 - When Fran fills a gap, remove its amber "Waiting on Fran" box and update "Still open" in
   `PROJECT-CONTEXT.md`. Add each new decision to the decisions table there.
+- Every change after Sam's round three gets a row in `CHANGES.md` (before, now, asked by, status), so Fran can track them. Fran asked for this on 2026-10-20.

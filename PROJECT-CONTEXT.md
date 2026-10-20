@@ -47,6 +47,8 @@ can continue the work without having heard them.
 | BAE logo | Fran asked for new options. Three are in `review/bae-logo-options.html`: A star shield, B stripe wordmark, C seal |
 | BAI look | Red, white and blue plus black, purple and gold. New BAI logo still to make |
 | Family of brands | Removed the "One parent, three names" section and its menu and footer links (Fran, 2026-10-19). BAI and BAN still appear elsewhere on the page |
+| Two looks (direction) | Distribution half keeps the all-American look of the hero (flag, red, white, blue). Capital half moves to a California-coast look: Big Sur and Malibu, ocean, rugged cliffs, trees, beaches; power and money, replacing the office stock photos. Still a light site. (Fran, 2026-10-19) |
+| Map and draft banner | Fran is not keen on the dark US map tile or the black "Concept draft, not live" banner; leave both for now while Fran thinks it over (2026-10-19) |
 
 ## Design rules (keep these)
 

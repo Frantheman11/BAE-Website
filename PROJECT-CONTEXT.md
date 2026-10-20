@@ -38,7 +38,7 @@ can continue the work without having heard them.
 | Two halves | Distribution first (red), capital second (blue) |
 | The map | The main feature, high on the page. States pop on hover. Clicking a state shows that state's reps by name and a rep sign-up |
 | Reps | None signed yet, so every state shows "Open territory. Be the first." |
-| Rep pitch | Reps offer every product BAE represents and earn subscription and referral commissions, paid monthly under a rep agreement. The CRM is the rep portal |
+| Rep pitch | Fran, 2026-10-20: reps earn subscription and referral commissions plus gross margin on resale items, on customers they bring in from their state; commissions paid electronically every month. (Replaces Sam's summary: subscription and referral commissions, paid monthly under a rep agreement.) The CRM is the rep portal |
 | Who we look for | American business salespeople and independent agents, tech sales or business backgrounds, experience in area distribution and capital formation |
 | Two kinds of rep | Superseded 2026-10-19: all reps are social media influencers / reps (card 02). Was: network reps and social media reps who can sell anywhere |
 | Smart money | Investment from businesses whose interests line up with the company raising it. iPost: sports apparel, sporting goods, energy drinks. IoT Data Group: telecom providers, systems integrators, low voltage contractors. CTA: a private equity group that runs the system across its portfolio. All portfolio companies are open to investment |

@@ -40,3 +40,4 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 - 2026-10-19: Fran's written capital section added as a graphic: "Three core ingredients. One company." (Foundership, Capital, Management in linked red, blue and black circles). The amber "Waiting on Fran" box for it is removed. Pillars are a separate idea Fran will add later.
 - 2026-10-19: Card 02 under "Who we are looking for" is now "Social media influencers / reps": all reps are social media influencers (was "Social media reps: sell from anywhere, no territory needed").
 - 2026-10-19: Site phone number changed from 562-573-3200 to 310-488-7205 (header, Let's talk button, footer, search data), at Fran's request.
+- 2026-10-19: Phone number put back to 562-573-3200, the number on the current live site (Fran reversed the 310-488-7205 change).

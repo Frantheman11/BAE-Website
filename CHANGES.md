@@ -41,6 +41,7 @@ Updated 2026-10-20.
 | 32 | 10-20 | Custom Tailored Agents: AI systems for small businesses: a CRM, a phone receptionist, a website and social media that runs itself. Sold to: small business owners | A platform customized to fit each business, from small and mid-size companies to entire portfolios: one uniform, dashboard-driven agentic CRM, and more. Sold to: small and mid-size businesses, and whole portfolios | Fran | Current |
 | 33 | 10-20 | Custom Tailored Agents investor example: Smart money comes from a private equity group that runs the system across its portfolio companies… | CTA customizes its platform to fit small and mid-size businesses up to entire portfolios of businesses, with a uniform, dashboard-driven agentic CRM and more. (No "smart money comes from" list on this card for now) | Fran | Current |
 | 34 | 10-20 | "The model": Intel built its own CRM instead of paying for Salesforce licenses… That was a strategic investment. | Removed | Fran | Current |
+| 35 | 10-20 | Hero tags "01 · Distribution" and "02 · Capital" | Removed | Fran | Current |
 
 ## New sections
 

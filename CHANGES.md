@@ -43,6 +43,8 @@ Updated 2026-10-20.
 | 33 | 10-20 | Custom Tailored Agents investor example: Smart money comes from a private equity group that runs the system across its portfolio companies… | CTA customizes its platform to fit small and mid-size businesses up to entire portfolios of businesses, with a uniform, dashboard-driven agentic CRM and more. (No "smart money comes from" list on this card for now) | Fran | Current |
 | 34 | 10-20 | "The model": Intel built its own CRM instead of paying for Salesforce licenses… That was a strategic investment. | Removed | Fran | Current |
 | 37 | 10-20 | (Smart money definition) | Added: Smart money can also be regional: investors in a company's own market, reached through our regional investor network across the West, Central and East regions. | Fran | Current |
+| 38 | 10-20 | Diligence step 03: Matched to a company | Matched to a company through our regional investor network | Fran | Current |
+| 39 | 10-20 | Hero: Hard work, logic, faith and excellence is our mission. Two halves, in this order: distribution, then capital. | Hard work, logic, faith and excellence is our mission. | Fran | Current |
 | 35 | 10-20 | Hero tags "01 · Distribution" and "02 · Capital" | Removed | Fran | Current |
 
 ## New sections

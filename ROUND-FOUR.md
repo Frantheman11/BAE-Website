@@ -42,3 +42,4 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 - 2026-10-19: Site phone number changed from 562-573-3200 to 310-488-7205 (header, Let's talk button, footer, search data), at Fran's request.
 - 2026-10-19: Phone number put back to 562-573-3200, the number on the current live site (Fran reversed the 310-488-7205 change).
 - 2026-10-19: Portfolio heading changed from "Innovation creates deal flow" to "Innovation, deal flow and solid management lead to ROI" (Fran). "ROI" is return language: add it to the wording list for the attorney.
+- 2026-10-19: Stronger split between the halves (Fran): Part One opens with a full-width stars-and-stripes panel (built in code, no photo); Part Two opens with a tall full-bleed Big Sur coastline. Each has a white card: "Distribution: the rep network, fifty states, three regions" and "Capital: smart money for smart American companies".

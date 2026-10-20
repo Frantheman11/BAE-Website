@@ -572,3 +572,38 @@ dialog.note .actions { margin-top: 20px; display: flex; gap: 10px; justify-conte
 @media (max-width: 640px) { .flagband::before { width: 60%; height: 45%; } .flagband .wrap { justify-content: center; } .chapter .ch-card { max-width: 100%; } }
 .chapter .ch-card { max-width: min(100%, 820px); }
 .chapter .pt { font-size: clamp(34px, 5.6vw, 76px); overflow-wrap: anywhere; }
+
+/* Round four: sign-up forms (rep and company), opened from the sign-up buttons. Draft: nothing is sent. */
+dialog.form-dlg { border: 0; border-radius: var(--radius-lg); padding: 0; width: min(680px, 94vw); max-height: 92vh; box-shadow: 0 30px 80px rgba(14,15,19,.35); color: var(--ink); background: #fff; }
+dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur(4px); }
+.form-dlg form { padding: clamp(22px, 4vw, 36px); display: grid; gap: 16px; position: relative; }
+.form-dlg .x { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--line-2); background: #fff; font-size: 22px; line-height: 1; }
+.form-dlg h3 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; font-variation-settings: "wdth" 125; line-height: 1; margin: -4px 0 0; }
+.form-dlg .lead { color: var(--mute); font-size: 16px; margin: -6px 0 4px; }
+.form-dlg fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 10px; }
+.form-dlg legend { font-weight: 700; font-size: 15px; padding: 0; margin-bottom: 8px; }
+.form-dlg legend small, .f small { font-weight: 500; color: var(--mute); }
+.form-dlg .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.form-dlg .chips label span { display: inline-block; padding: 10px 16px; border: 2px solid var(--line-2); border-radius: 999px; font-weight: 700; cursor: pointer; background: #fff; }
+.form-dlg .chips input, .form-dlg .seats input { position: absolute; opacity: 0; pointer-events: none; }
+.form-dlg .chips input:checked + span { border-color: var(--ink); background: var(--ink); color: #fff; }
+.form-dlg .chips .c-red input:checked + span { border-color: var(--red); background: var(--red); }
+.form-dlg .chips .c-blue input:checked + span { border-color: var(--blue); background: var(--blue); }
+.form-dlg .chips input:focus-visible + span, .form-dlg .seats input:focus-visible + span { outline: 3px solid var(--blue); outline-offset: 2px; }
+.form-dlg .seats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.form-dlg .seats label span { display: grid; gap: 4px; height: 100%; padding: 14px; border: 2px solid var(--line-2); border-radius: 12px; cursor: pointer; background: #fff; }
+.form-dlg .seats small { color: var(--mute); font-size: 13px; }
+.form-dlg .seats input:checked + span { border-color: var(--red); box-shadow: inset 4px 0 0 var(--red); }
+.form-dlg .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-dlg .f { display: grid; gap: 6px; }
+.form-dlg .f > span { font-weight: 600; font-size: 14px; }
+.form-dlg input:not([type=checkbox]):not([type=radio]), .form-dlg select, .form-dlg textarea { font: inherit; font-size: 16px; padding: 12px 14px; border: 1.5px solid var(--line-2); border-radius: 10px; background: #fff; color: var(--ink); width: 100%; }
+.form-dlg input:focus, .form-dlg select:focus, .form-dlg textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(36,88,230,.15); }
+.form-dlg .f.bad input, .form-dlg .f.bad select, .form-dlg .f.bad textarea { border-color: var(--red); box-shadow: 0 0 0 3px rgba(213,18,28,.12); }
+.form-dlg .region-hint { color: var(--blue); font-weight: 600; min-height: 1em; }
+.form-dlg .foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 4px; }
+.form-dlg .fine { color: var(--mute); font-size: 13px; max-width: 36ch; margin: 0; }
+.form-dlg .done { text-align: center; display: grid; gap: 10px; justify-items: center; padding: 20px 0; }
+.form-dlg .done h4 { font-size: 32px; font-weight: 900; font-variation-settings: "wdth" 125; color: var(--blue); }
+.form-dlg [hidden] { display: none !important; }
+@media (max-width: 600px) { .form-dlg .row2, .form-dlg .seats { grid-template-columns: 1fr; } .form-dlg .foot .btn { width: 100%; justify-content: center; } }

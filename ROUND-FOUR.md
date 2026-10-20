@@ -35,3 +35,4 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 ## Decided after round four
 
 - 2026-10-19: Fran removed the "One parent, three names" (family of brands) section.
+- 2026-10-19: iPost Sports logo on white tiles (rep products, smart-money examples) replaced with the dark-gray-and-red version from Desktop\iPost Sports\iPost Sports Social Media Profile.png (trimmed), so the white "i" and "sports" no longer disappear. The dark portfolio tile keeps the original white-and-red logo.

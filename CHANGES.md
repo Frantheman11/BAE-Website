@@ -38,6 +38,7 @@ Updated 2026-10-20.
 | 29 | 10-20 | "Waiting on Fran" box for the rep tagline and distribution piece | Removed: Fran's rep pay wording (row 28) covers it | Fran | Current |
 | 30 | 10-20 | Smart money photo (handshake in Sam's version, then Bixby Bridge) | Removed; the smart money text runs full width over the coast backdrop | Fran | Current |
 | 31 | 10-20 | "Two doors: Smart money. Smart companies. Pick yours" section (investor and founder doors) | Removed; investors reach Fran from Smart money and the diligence section, companies from their own sign-up | Fran | Current |
+| 32 | 10-20 | Custom Tailored Agents: AI systems for small businesses: a CRM, a phone receptionist, a website and social media that runs itself. Sold to: small business owners | A platform customized to fit each business, from small and mid-size companies to entire portfolios: one uniform, dashboard-driven agentic CRM, and more. Sold to: small and mid-size businesses, and whole portfolios | Fran | Current |
 
 ## New sections
 

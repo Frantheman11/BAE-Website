@@ -46,6 +46,7 @@ can continue the work without having heard them.
 | Team | Bios and photos from the current site for now |
 | BAE logo | Fran asked for new options. Three are in `review/bae-logo-options.html`: A star shield, B stripe wordmark, C seal |
 | BAI look | Red, white and blue plus black, purple and gold. New BAI logo still to make |
+| Family of brands | Removed the "One parent, three names" section and its menu and footer links (Fran, 2026-10-19). BAI and BAN still appear elsewhere on the page |
 
 ## Design rules (keep these)
 

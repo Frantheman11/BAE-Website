@@ -31,3 +31,7 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 - **Block Battery and BlackMP** are in the portfolio grid. Still in the portfolio?
 - Sam's three open items stand: the rep tagline, your distribution and capital pieces, and the logo
   pick (open `review/bae-logo-options.html`).
+
+## Decided after round four
+
+- 2026-10-19: Fran removed the "One parent, three names" (family of brands) section.

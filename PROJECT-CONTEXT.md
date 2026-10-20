@@ -48,7 +48,8 @@ can continue the work without having heard them.
 | BAI look | Red, white and blue plus black, purple and gold. New BAI logo still to make |
 | Family of brands | Removed the "One parent, three names" section and its menu and footer links (Fran, 2026-10-19). BAI and BAN still appear elsewhere on the page |
 | Two looks (direction) | Distribution half keeps the all-American look of the hero (flag, red, white, blue). Capital half moves to a California-coast look: Big Sur and Malibu, ocean, rugged cliffs, trees, beaches; power and money, replacing the office stock photos. Still a light site. (Fran, 2026-10-19) |
-| Chapter openers | Each half opens with a full-width panel: stars and stripes (Distribution), Big Sur coast (Capital) (Fran, 2026-10-19) |
+| Chapter openers | Three parts, each with a full-width opener: Distribution (stars and stripes), Companies (office photo, black), Capital (Big Sur coast, regal). No "Part one/two" labels (Fran, 2026-10-19) |
+| Investor diligence | The capital half centers on qualifying investors as smart money: criteria and steps (draft, to confirm); next a calculator scoring foundership, capital and management, and a matchmaking score for investor qualification (Fran, 2026-10-19) |
 | Capital type | Capital heading in regal serif: Cinzel capitals (navy), gold accents, Cormorant Garamond italic; old-money Wall Street feel, without copying any logo (Fran, 2026-10-19) |
 | Sign-up forms | Two page sections (not pop-ups): reps after How to start, companies after the portfolio. Rep form (salesperson, influencer, agent; regional director, master agent, sub-agent) and company form (needs: foundership, capital, management, distribution). Draft only; connect to the CRM with Sam at launch (Fran, 2026-10-19) |
 | Map and draft banner | Fran is not keen on the dark US map tile or the black "Concept draft, not live" banner; leave both for now while Fran thinks it over (2026-10-19) |

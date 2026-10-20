@@ -16,19 +16,11 @@
       <h2 id="repTitle" class="h2 display">Master agents, professional agents and social network agents: sign up</h2>
       <p class="lead">Tell us who you are and the seat you want. Fran screens every rep on a call.</p>
 
-      <fieldset><legend>I am a <small>(pick any)</small></legend>
-        <div class="chips">
-          <label><input type="checkbox" name="kind" value="salesperson"><span>Salesperson</span></label>
-          <label><input type="checkbox" name="kind" value="influencer"><span>Influencer</span></label>
-          <label><input type="checkbox" name="kind" value="agent"><span>Agent</span></label>
-        </div>
-      </fieldset>
-
-      <fieldset><legend>The seat I want</legend>
+      <fieldset><legend>I want to be a</legend>
         <div class="seats">
-          <label><input type="radio" name="seat" value="regional-director"><span><b>Regional director</b><small>Leads a region: West, Central or East</small></span></label>
           <label><input type="radio" name="seat" value="master-agent"><span><b>Master agent</b><small>Heads one state</small></span></label>
-          <label><input type="radio" name="seat" value="network-agent" checked><span><b>Network agent</b><small>Sells under a state's master agent</small></span></label>
+          <label><input type="radio" name="seat" value="professional-agent" checked><span><b>Professional agent</b><small>Sells face to face: meetings, handshakes, trade shows</small></span></label>
+          <label><input type="radio" name="seat" value="social-network-agent"><span><b>Social network agent</b><small>Sells through your social media following</small></span></label>
         </div>
       </fieldset>
 
@@ -143,7 +135,7 @@
     if (el.dataset.note === 'rep' || el.getAttribute('href') === '#signup-reps') {
       const code = el.querySelector('#spCta') ? stateFromCta() : '';
       if (code) { const sel = $('select[name="state"]', repDlg); sel.value = code; sel.dispatchEvent(new Event('change')); }
-      go($('#signup-reps'), $('input[name="kind"]', repDlg));
+      go($('#signup-reps'), $('input[name="seat"]:checked', repDlg));
     } else {
       go($('#signup-companies'), $('input[name="company"]', coDlg));
     }

@@ -672,3 +672,5 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 /* Round four: light three-region map replaces the black night map (Fran, 2026-10-20) */
 .about .photo.map-light img { object-fit: contain; object-position: center; background: #fff; }
 .hero .slide .face img[src*="us-map-light"] { object-fit: contain; background: #fff; }
+/* One map only (Fran, 2026-10-20): the rep program section drops its picture and uses the full width */
+.about.reps .grid { grid-template-columns: 1fr; } .about.reps .copy { max-width: 900px; }

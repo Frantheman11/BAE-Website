@@ -57,3 +57,4 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 - 2026-10-19: Rep form now asks "I want to be a": Master agent (heads one state), Professional agent (sells face to face), Social network agent (sells through social media). Removed the salesperson/influencer/agent tags and the regional director and network agent seats (Fran: make the form match the heading).
 - 2026-10-20: Hero line ends "…smart money behind the companies we are growing together." (Fran)
 - 2026-10-20: Black night map (distribution.jpg) replaced everywhere with assets/us-map-light.svg, a light three-region map (Fran). The interactive map section was already light.
+- 2026-10-20: One map only (Fran): the still light map is removed from the rep program section (now full width) and the hero Reps card (now the team photo). assets/us-map-light.svg is unused.

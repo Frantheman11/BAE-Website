@@ -28,7 +28,7 @@
         <div class="seats">
           <label><input type="radio" name="seat" value="regional-director"><span><b>Regional director</b><small>Leads a region: West, Central or East</small></span></label>
           <label><input type="radio" name="seat" value="master-agent"><span><b>Master agent</b><small>Heads one state</small></span></label>
-          <label><input type="radio" name="seat" value="sub-agent" checked><span><b>Sub-agent</b><small>Sells under a state's master agent</small></span></label>
+          <label><input type="radio" name="seat" value="network-agent" checked><span><b>Network agent</b><small>Sells under a state's master agent</small></span></label>
         </div>
       </fieldset>
 

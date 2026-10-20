@@ -119,7 +119,7 @@
     $('#spLead').textContent = 'Open';
     $('#spRepsLabel').textContent = `Reps in ${s.name}`;
     listReps(REPS[s.code] || [], 'Open territory. Be the first.');
-    $('#spNote').textContent = `${s.name} needs a master rep, with sub-agents under them across the state. The master sees every ${s.name} lead.`;
+    $('#spNote').textContent = `${s.name} needs a master rep, with network agents under them across the state. The master sees every ${s.name} lead.`;
     $('#spCta').textContent = `Sign up for ${s.name}`;
     $('#statePanel').classList.remove('flash'); void $('#statePanel').offsetWidth; $('#statePanel').classList.add('flash');
   };

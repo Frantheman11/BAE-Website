@@ -18,6 +18,7 @@ Updated 2026-10-20.
 | 7 | 10-19 | iPost Sports logo on white tiles swapped for the dark-gray version, so the whole logo shows | Fran | Current |
 | 8 | 10-19 | Big "BASIC AMERICAN" wordmark fixed so it fits on a phone | Claude | Current |
 | 9 | 10-19 | Six heavy photos made lighter (page images 6.5 MB to 0.8 MB) | Claude | Current |
+| 36 | 10-20 | Distribution flag made elegant: real five-point stars (were dots), Old Glory red and navy, 13 true stripes with the blue field over 7, a satin sheen, and a framed card in navy and red | Fran | Current |
 | 27 | 10-20 | Black night map of the US removed. One map only: the interactive "Find your state" map. The rep program section now runs full width with no picture; the hero "Reps" card shows the team photo instead | Fran | Current |
 
 ## Words

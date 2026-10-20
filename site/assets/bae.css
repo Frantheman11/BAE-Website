@@ -677,3 +677,18 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 /* Bixby Bridge photo removed from Smart money (Fran, 2026-10-20): text runs full width */
 .about.capital .grid { grid-template-columns: 1fr; } .about.capital .copy { max-width: 900px; }
 .ex .ex-desc { padding: 0 6px 8px; margin: 0; color: var(--mute); font-size: 16px; }
+/* Flag canton: real five-point stars instead of dots (Fran, 2026-10-20) */
+.flagband::before { background: url('/assets/us-stars.svg') 6px 4px / 34px 30px repeat, #0A2A66 !important; }
+
+/* Elegant flag (Fran, 2026-10-20): Old Glory colors, 13 true stripes, canton over 7 stripes, satin sheen, refined card */
+.flagband { --og-red: #B22234; --og-blue: #3C3B6E;
+  background: repeating-linear-gradient(180deg, var(--og-red) 0 calc(100% / 13), #FBFBF8 calc(100% / 13) calc(200% / 13)) !important; }
+.flagband::before { width: 40%; height: calc(700% / 13); background: url('/assets/us-stars.svg') 8px 6px / 30px 26px repeat, var(--og-blue) !important; z-index: 0; }
+.flagband::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: repeating-linear-gradient(105deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.22) 7%, rgba(0,0,0,.10) 15%, rgba(255,255,255,0) 22%),
+              linear-gradient(180deg, rgba(255,255,255,.10), rgba(0,0,0,.08)); }
+.flagband .ch-card { border-top: 0; border-radius: 6px; background: rgba(255,255,255,.95);
+  box-shadow: 0 24px 60px rgba(30,30,60,.25), inset 0 0 0 1px rgba(60,59,110,.35), inset 0 0 0 7px rgba(255,255,255,.95), inset 0 0 0 8px rgba(178,34,52,.55); }
+.flagband .pt { color: var(--og-red); letter-spacing: .02em; }
+.flagband .cs { color: var(--og-blue); }
+@media (max-width: 640px) { .flagband::before { width: 62%; } }

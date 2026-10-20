@@ -620,3 +620,15 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 .signup-companies .form-dlg { border-top: 8px solid var(--blue); }
 .signup .form-dlg h2 { font-size: clamp(30px, 4.2vw, 52px); font-weight: 900; font-variation-settings: "wdth" 125; line-height: 1; margin: 0; }
 .signup .form-dlg .lead { font-size: 18px; margin: 0 0 6px; }
+
+/* Round four: regal Capital heading (Fran, 2026-10-19): engraved serif capitals, navy and gold, double gold frame */
+:root { --gold: #B08D3E; --gold-2: #D9BF7A; --navy: #0B1F44; }
+#capital .ch-card { background: rgba(255,255,255,.93); border-top: 0; border-radius: 6px; text-align: center; justify-items: center; gap: 10px;
+  padding: clamp(28px, 4vw, 48px) clamp(34px, 6vw, 80px);
+  box-shadow: 0 24px 60px rgba(11,31,68,.28), inset 0 0 0 1px var(--gold), inset 0 0 0 7px rgba(255,255,255,.93), inset 0 0 0 8px var(--gold); }
+#capital .pn { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: .35em; color: var(--gold); font-size: 13px; display: flex; align-items: center; gap: 14px; }
+#capital .pn::before, #capital .pn::after { content: ""; width: 38px; height: 1px; background: var(--gold); }
+#capital .pt { font-family: 'Cinzel', serif; font-variation-settings: normal; font-weight: 700; letter-spacing: .12em; color: var(--navy);
+  font-size: clamp(42px, 7vw, 96px); line-height: 1; text-transform: uppercase; padding-left: .12em;
+  text-shadow: 0 1px 0 #fff, 0 2px 0 rgba(176,141,62,.35); }
+#capital .cs { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 600; font-size: clamp(20px, 2.2vw, 28px); color: var(--navy); border-top: 1px solid var(--gold); padding-top: 12px; }

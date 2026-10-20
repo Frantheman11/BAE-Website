@@ -40,7 +40,7 @@ can continue the work without having heard them.
 | Reps | None signed yet, so every state shows "Open territory. Be the first." |
 | Rep pitch | Reps offer every product BAE represents and earn subscription and referral commissions, paid monthly under a rep agreement. The CRM is the rep portal |
 | Who we look for | American business salespeople and independent agents, tech sales or business backgrounds, experience in area distribution and capital formation |
-| Two kinds of rep | Network reps (handshakes, trade shows, their own state) and social media reps (can sell anywhere). Both welcome |
+| Two kinds of rep | Superseded 2026-10-19: all reps are social media influencers / reps (card 02). Was: network reps and social media reps who can sell anywhere |
 | Smart money | Investment from businesses whose interests line up with the company raising it. iPost: sports apparel, sporting goods, energy drinks. IoT Data Group: telecom providers, systems integrators, low voltage contractors. CTA: a private equity group that runs the system across its portfolio. All portfolio companies are open to investment |
 | Portfolio | Every company on the current site, in one clean logo grid |
 | Team | Bios and photos from the current site for now |

@@ -23,7 +23,7 @@ Updated 2026-10-20.
 
 | # | Date | Before (Sam) | Now | Asked by | Status |
 |---|---|---|---|---|---|
-| 10 | 10-19 | A network of reps in every state, and smart money behind the companies they carry. | A network of professional representation in every state, and smart money behind the companies it carries. | Fran | Current |
+| 10 | 10-19 | A network of reps in every state, and smart money behind the companies they carry. | A network of professional representation in every state, and smart money behind the companies we are growing together. | Fran | Current (10-20; 10-19 version ended "…the companies it carries") |
 | 11 | 10-19 | Innovation creates deal flow | Innovation, deal flow and solid management lead to ROI | Fran | Current (attorney to review "ROI") |
 | 12 | 10-19 | Salespeople and agents | Master agents, professional agents and social network agents | Fran | Current |
 | 13 | 10-19 | An American business salesperson or independent agent… | An American business salesperson, influencer or independent agent… | Fran | Current |

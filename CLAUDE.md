@@ -19,3 +19,4 @@ Custom Tailored Agents (Sam Briones) built rounds one to three. Fran now continu
 - When Fran fills a gap, remove its amber "Waiting on Fran" box and update "Still open" in
   `PROJECT-CONTEXT.md`. Add each new decision to the decisions table there.
 - Every change after Sam's round three gets a row in `CHANGES.md` (before, now, asked by, status), so Fran can track them. Fran asked for this on 2026-10-20.
+- **Fran, 2026-10-20: do not involve Sam yet.** No emails, files or status updates to Sam about this site, and no CRM hookup, until Fran says he is ready to invite Sam's input. This overrides "Tell Sam before going live" above until Fran lifts it.

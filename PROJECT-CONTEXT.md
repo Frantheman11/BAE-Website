@@ -78,8 +78,8 @@ can continue the work without having heard them.
 
 ## Still open
 
-- The rep tagline (Become a rep section). Fran writes it.
-- Fran's written "distribution" piece (the capital section is done: three core ingredients, 2026-10-19).
+- ~~The rep tagline~~ Done 2026-10-20: Fran's rep pay wording covers the rep section.
+- ~~Fran's written distribution piece~~ Done 2026-10-20 (rep pay wording); capital section done 2026-10-19.
 - The logo pick (A, B, C or a mix). Then make it a clean SVG for the nav, footer and browser tab.
 - One-line descriptions for BAN, Block Battery and BlackMP in the portfolio.
 - The amber dashed "Waiting on Fran" boxes on the page mark each gap. Remove a box when its text lands.

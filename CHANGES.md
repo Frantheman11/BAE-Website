@@ -35,6 +35,7 @@ Updated 2026-10-20.
 | 18 | 10-19 | (four products reps carry) | Added Basic American Networks | Claude | Current |
 | 19 | 10-19 | Phone 562-573-3200 | Changed to 310-488-7205, then back to 562-573-3200 | Fran | Reversed (no change) |
 | 28 | 10-20 | Reps earn subscription and referral commissions on the customers they bring to these products. Paid electronically, every month, under a rep agreement. | Reps earn subscription and referral commissions, plus gross margin on resale items, on the customers they bring in from their state. Commissions are paid electronically every month. | Fran | Current |
+| 29 | 10-20 | "Waiting on Fran" box for the rep tagline and distribution piece | Removed: Fran's rep pay wording (row 28) covers it | Fran | Current |
 
 ## New sections
 

@@ -51,3 +51,4 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 - 2026-10-19: Three parts now (Fran): Distribution (flag) > Companies (new opener on the office handshake photo; incubation with the office team photo, portfolio, company sign-up) > Capital (coast, regal; smart money and core ingredients, then a new centerpiece "Deep diligence: Qualifying smart money" with six criteria and four steps, then the investor examples). Diligence criteria and steps are Claude's first draft, marked Waiting on Fran; item IV (qualified to invest) needs the attorney's wording.
 - 2026-10-19: Hero mission line ("Hard work, logic, faith and excellence...") put on a white panel at every width; it was dark on the dark flag photo (Fran).
 - 2026-10-19: Ideal rep is now "An American business salesperson, influencer or independent agent..." (Fran).
+- 2026-10-19: Added "Deep social media roots" to the ideal-rep list (Fran).

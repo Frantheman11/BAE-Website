@@ -37,6 +37,7 @@ Updated 2026-10-20.
 | 28 | 10-20 | Reps earn subscription and referral commissions on the customers they bring to these products. Paid electronically, every month, under a rep agreement. | Reps earn subscription and referral commissions, plus gross margin on resale items, on the customers they bring in from their state. Commissions are paid electronically every month. | Fran | Current |
 | 29 | 10-20 | "Waiting on Fran" box for the rep tagline and distribution piece | Removed: Fran's rep pay wording (row 28) covers it | Fran | Current |
 | 30 | 10-20 | Smart money photo (handshake in Sam's version, then Bixby Bridge) | Removed; the smart money text runs full width over the coast backdrop | Fran | Current |
+| 31 | 10-20 | "Two doors: Smart money. Smart companies. Pick yours" section (investor and founder doors) | Removed; investors reach Fran from Smart money and the diligence section, companies from their own sign-up | Fran | Current |
 
 ## New sections
 

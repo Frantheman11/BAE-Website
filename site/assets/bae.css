@@ -664,3 +664,7 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 @media (max-width: 900px) { .dil-grid { grid-template-columns: 1fr 1fr; } .dil-steps { grid-template-columns: 1fr 1fr; } .dil-steps li:nth-child(2) { border-right: 0; } .dil-steps li:nth-child(-n+2) { border-bottom: 1px solid rgba(217,191,122,.35); } }
 @media (max-width: 560px) { .dil-grid, .dil-steps { grid-template-columns: 1fr; } .dil-steps li { border-right: 0; border-bottom: 1px solid rgba(217,191,122,.35); } }
 .diligence .dil-head { background: rgba(255,255,255,.88); border-radius: 6px; padding: clamp(22px, 3vw, 36px) clamp(22px, 4vw, 48px); box-shadow: 0 14px 36px rgba(11,31,68,.12), inset 0 0 0 1px rgba(176,141,62,.45); }
+
+/* Round four: hero mission line was dark gray on the dark flag photo; give it a light panel at every width (Fran, 2026-10-19) */
+.hero .bottom p { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); padding: 16px 20px; border-radius: 12px; box-shadow: var(--shadow); color: var(--ink); }
+.hero .bottom p b { color: var(--ink); }

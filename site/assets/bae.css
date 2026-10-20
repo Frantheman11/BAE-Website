@@ -607,3 +607,16 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 .form-dlg .done h4 { font-size: 32px; font-weight: 900; font-variation-settings: "wdth" 125; color: var(--blue); }
 .form-dlg [hidden] { display: none !important; }
 @media (max-width: 600px) { .form-dlg .row2, .form-dlg .seats { grid-template-columns: 1fr; } .form-dlg .foot .btn { width: 100%; justify-content: center; } }
+
+/* Round four: the two sign-up forms are now page sections (Fran, 2026-10-19) */
+.signup { padding: clamp(64px, 8vw, 110px) 0; position: relative; isolation: isolate; }
+.signup-reps { background: var(--bg-2); border-top: 6px solid var(--red); }
+.signup-companies { background: transparent; }
+.signup-companies::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url('/assets/coast-malibu-golden.jpg') center/cover fixed; }
+.signup-companies::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(244,245,248,.75), rgba(244,245,248,.55) 50%, rgba(244,245,248,.8)); }
+@media (hover: none), (max-width: 760px) { .signup-companies::before { background-attachment: scroll; } }
+.signup .form-dlg { background: #fff; border-radius: var(--radius-lg); max-width: 860px; margin: 0 auto; box-shadow: 0 24px 60px rgba(14,15,19,.16); }
+.signup-reps .form-dlg { border-top: 8px solid var(--red); }
+.signup-companies .form-dlg { border-top: 8px solid var(--blue); }
+.signup .form-dlg h2 { font-size: clamp(30px, 4.2vw, 52px); font-weight: 900; font-variation-settings: "wdth" 125; line-height: 1; margin: 0; }
+.signup .form-dlg .lead { font-size: 18px; margin: 0 0 6px; }

@@ -10,12 +10,11 @@
   const stateOptions = states.map(s => `<option value="${s.code}">${s.name}</option>`).join('');
 
   const rep = `
-  <dialog class="form-dlg" id="repForm" aria-labelledby="repTitle">
-    <form method="dialog" novalidate>
-      <button class="x" type="button" data-close aria-label="Close">×</button>
-      <span class="eyebrow">Become a rep</span>
-      <h3 id="repTitle" class="display">Own your territory</h3>
-      <p class="lead">Salespeople, influencers and agents: tell us who you are. Fran screens every rep on a call.</p>
+  <section class="signup signup-reps" id="signup-reps" aria-labelledby="repTitle"><div class="wrap"><div class="form-dlg" id="repForm">
+    <form novalidate>
+      <span class="eyebrow">Rep sign-up</span>
+      <h2 id="repTitle" class="h2 display">Salespeople, influencers and agents: sign up</h2>
+      <p class="lead">Tell us who you are and the seat you want. Fran screens every rep on a call.</p>
 
       <fieldset><legend>I am a <small>(pick any)</small></legend>
         <div class="chips">
@@ -53,16 +52,15 @@
         <p class="fine">Draft form: nothing is sent yet. On the live site this goes to Fran, then you pick a time on his calendar.</p>
         <button class="btn btn-blue" type="submit"><span class="ico">→</span> Request a call with Fran</button>
       </div>
-      <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your details now and you pick a time for your call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-close>Close</button></div>
+      <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your details now and you pick a time for your call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>
     </form>
-  </dialog>`;
+  </div></div></section>`;
 
   const company = `
-  <dialog class="form-dlg" id="coForm" aria-labelledby="coTitle">
-    <form method="dialog" novalidate>
-      <button class="x" type="button" data-close aria-label="Close">×</button>
-      <span class="eyebrow blue">Smart companies</span>
-      <h3 id="coTitle" class="display">Bring us your company</h3>
+  <section class="signup signup-companies" id="signup-companies" aria-labelledby="coTitle"><div class="wrap"><div class="form-dlg" id="coForm">
+    <form novalidate>
+      <span class="eyebrow blue">Company sign-up</span>
+      <h2 id="coTitle" class="h2 display">Companies seeking participation</h2>
       <p class="lead">For founders with an innovative product who want a channel, capital or both.</p>
 
       <div class="row2">
@@ -98,17 +96,18 @@
         <p class="fine">Draft form: nothing is sent yet. On the live site this goes to Fran, then you pick a time on his calendar.</p>
         <button class="btn btn-blue" type="submit"><span class="ico">→</span> Request a call with Fran</button>
       </div>
-      <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your company details now and you pick a time for a call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-close>Close</button></div>
+      <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your company details now and you pick a time for a call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>
     </form>
-  </dialog>`;
+  </div></div></section>`;
 
-  document.body.insertAdjacentHTML('beforeend', rep + company);
+  // Each form is its own section: reps close the Distribution half, companies follow the portfolio
+  ($('#join') || document.body).insertAdjacentHTML('afterend', rep);
+  ($('#portfolio') || document.body).insertAdjacentHTML('afterend', company);
 
   const setup = dlg => {
     const form = $('form', dlg);
-    $$('[data-close]', dlg).forEach(b => b.addEventListener('click', () => dlg.close()));
-    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
-    dlg.addEventListener('close', () => { form.reset(); $('.done', dlg).hidden = true; $$('.foot, fieldset, .row2, .f', form).forEach(el => el.hidden = false); $$('.bad', form).forEach(el => el.classList.remove('bad')); });
+    const reset = () => { form.reset(); $('.done', dlg).hidden = true; $$('.foot, fieldset, .row2, .f', form).forEach(el => el.hidden = false); $$('.bad', form).forEach(el => el.classList.remove('bad')); const h = $('.region-hint', dlg); if (h) h.textContent = ''; };
+    $$('[data-reset]', dlg).forEach(b => b.addEventListener('click', reset));
     form.addEventListener('submit', e => {
       e.preventDefault();
       const missing = $$('[required]', form).filter(el => !el.value.trim() || (el.type === 'email' && !el.checkValidity()));
@@ -134,17 +133,19 @@
     return m ? (states.find(s => s.name === m[1]) || {}).code : '';
   };
 
-  // Open the forms instead of the old "on the live site" notes (capture phase runs before bae.js)
+  // Sign-up buttons scroll to the sections instead of opening the old "on the live site" notes
+  // (capture phase runs before bae.js)
+  const go = (sec, field) => { const close = $('#menuClose'); if (close && close.offsetParent) close.click(); sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); setTimeout(() => field && field.focus({ preventScroll: true }), 600); };
   document.addEventListener('click', e => {
-    const el = e.target.closest('[data-note="rep"], [data-note="apply"]');
+    const el = e.target.closest('[data-note="rep"], [data-note="apply"], a[href="#signup-reps"], a[href="#signup-companies"]');
     if (!el) return;
     e.preventDefault(); e.stopImmediatePropagation();
-    if (el.dataset.note === 'rep') {
-      repDlg.showModal();
+    if (el.dataset.note === 'rep' || el.getAttribute('href') === '#signup-reps') {
       const code = el.querySelector('#spCta') ? stateFromCta() : '';
       if (code) { const sel = $('select[name="state"]', repDlg); sel.value = code; sel.dispatchEvent(new Event('change')); }
+      go($('#signup-reps'), $('input[name="kind"]', repDlg));
     } else {
-      coDlg.showModal();
+      go($('#signup-companies'), $('input[name="company"]', coDlg));
     }
   }, true);
 })();

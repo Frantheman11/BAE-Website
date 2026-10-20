@@ -512,3 +512,18 @@ dialog.note .actions { margin-top: 20px; display: flex; gap: 10px; justify-conte
 @media (max-width: 1100px) { .lines { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 760px) { .lines { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .lines { grid-template-columns: 1fr; } }
+
+/* Round four: California-coast backdrop for the capital half (Fran, 2026-10-19).
+   Each .coast section gets a full-bleed photo (set with --coast) under a soft light veil, so it stays a light site
+   and text stays readable. On computers the photo stays put while the page scrolls over it. */
+.coast { position: relative; isolation: isolate; background: transparent !important; }
+.coast::before { content: ""; position: absolute; inset: 0; z-index: -2; background-image: var(--coast); background-size: cover; background-position: center; background-attachment: fixed; }
+.coast::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(244,245,248,.70) 0%, rgba(244,245,248,.40) 45%, rgba(244,245,248,.72) 100%); }
+.coast-band { border-color: rgba(255,255,255,.6); }
+.coast-band::after { background: linear-gradient(90deg, rgba(255,255,255,.88) 0%, rgba(255,255,255,.55) 45%, rgba(255,255,255,.15) 100%); }
+.coast-band { padding: clamp(48px, 7vw, 96px) 0 !important; }
+.about.coast::after { background: linear-gradient(90deg, rgba(244,245,248,.55) 0%, rgba(244,245,248,.82) 50%, rgba(244,245,248,.9) 100%); }
+@media (max-width: 900px) { .about.coast::after { background: rgba(244,245,248,.84); } }
+/* Phones and tablets do not support a fixed backdrop well */
+@media (hover: none), (max-width: 760px) { .coast::before { background-attachment: scroll; } }
+.close-sec .box img { object-position: 65% 90%; }

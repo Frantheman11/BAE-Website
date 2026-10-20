@@ -13,7 +13,7 @@
   <section class="signup signup-reps" id="signup-reps" aria-labelledby="repTitle"><div class="wrap"><div class="form-dlg" id="repForm">
     <form novalidate>
       <span class="eyebrow">Rep sign-up</span>
-      <h2 id="repTitle" class="h2 display">Salespeople, influencers and agents: sign up</h2>
+      <h2 id="repTitle" class="h2 display">Master agents, professional agents and social network agents: sign up</h2>
       <p class="lead">Tell us who you are and the seat you want. Fran screens every rep on a call.</p>
 
       <fieldset><legend>I am a <small>(pick any)</small></legend>

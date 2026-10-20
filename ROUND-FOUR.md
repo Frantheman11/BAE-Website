@@ -53,3 +53,4 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 - 2026-10-19: Ideal rep is now "An American business salesperson, influencer or independent agent..." (Fran).
 - 2026-10-19: Added "Deep social media roots" to the ideal-rep list (Fran).
 - 2026-10-19: "Sub-agents" renamed "network agents" everywhere: map text, network structure, state panel, rep sign-up seat (Fran).
+- 2026-10-19: "Who we are looking for" heading and the rep sign-up heading now read "Master agents, professional agents and social network agents" (Fran). Not yet changed: the rep form's "I am a" choices (salesperson, influencer, agent), the seats (regional director, master agent, network agent) and the ideal-rep line.

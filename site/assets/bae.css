@@ -668,3 +668,7 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 /* Round four: hero mission line was dark gray on the dark flag photo; give it a light panel at every width (Fran, 2026-10-19) */
 .hero .bottom p { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); padding: 16px 20px; border-radius: 12px; box-shadow: var(--shadow); color: var(--ink); }
 .hero .bottom p b { color: var(--ink); }
+
+/* Round four: light three-region map replaces the black night map (Fran, 2026-10-20) */
+.about .photo.map-light img { object-fit: contain; object-position: center; background: #fff; }
+.hero .slide .face img[src*="us-map-light"] { object-fit: contain; background: #fff; }

@@ -28,7 +28,7 @@
 
   // Hero audience card cycles through the three audiences
   const slides = [
-    { t: 'Reps', s: 'Fifty states, three regions', img: 'assets/distribution.jpg' },
+    { t: 'Reps', s: 'Fifty states, three regions', img: 'assets/us-map-light.svg' },
     { t: 'Companies', s: 'A channel, then capital', img: 'assets/smart-companies-light.jpg' },
     { t: 'Investors', s: 'Smart money, in your own industry', img: 'assets/fund-together.jpg' },
   ];

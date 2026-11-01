@@ -873,3 +873,12 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 
 /* "How the network is built" removed (Fran, 2026-10-31): the ideal rep card takes the full width */
 .who-grid { grid-template-columns: 1fr; }
+
+/* Product cards waiting on Fran (2026-10-31): Block Battery and BlackMP moved here from the removed Portfolio grid */
+.line-card .who.wait { background: #FFF4D6; color: #7A5A00; border: 1px dashed #C99A1E; }
+
+/* Capital half opens from the Strategic Investors door (Fran, 2026-10-31); investor inquiry at its end */
+.capital-part[hidden] { display: none; }
+.signup-investors { background: #FFFDF7; }
+.signup-investors .form-dlg { border-top: 8px solid var(--gold); }
+#capital { scroll-margin-top: 72px; }

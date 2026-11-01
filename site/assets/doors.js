@@ -94,16 +94,54 @@
     }
   };
 
+  // The Capital half sits right under the doors, hidden until the Strategic Investors door opens it (Fran, 2026-10-31)
+  const capital = $('#capitalPart'), invBox = $('#invForm');
+
+  const wire = form => {
+    $$('[data-reset]', form).forEach(b => b.addEventListener('click', () => {
+      form.reset(); $('.done', form).hidden = true;
+      $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = false);
+    }));
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const missing = $$('[required]', form).filter(el => !el.value.trim() || (el.type === 'email' && !el.checkValidity()));
+      $$('.bad', form).forEach(el => el.classList.remove('bad'));
+      if (missing.length) { missing.forEach(el => el.closest('.f').classList.add('bad')); missing[0].focus(); return; }
+      $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = true);
+      $('.done', form).hidden = false;
+    });
+  };
+
   let open = '';
+  const mark = key => $$('.doors4 [data-door]').forEach(a => { const on = a.dataset.door === key; a.classList.toggle('on', on); a.setAttribute('aria-expanded', String(on)); });
   const close = () => {
     open = ''; panel.hidden = true; panel.innerHTML = '';
-    $$('.doors4 [data-door]').forEach(a => { a.classList.remove('on'); a.setAttribute('aria-expanded', 'false'); });
+    if (capital) capital.hidden = true;
+    mark('');
+  };
+
+  const showCapital = () => {
+    open = 'inv'; mark('inv');
+    panel.hidden = true; panel.innerHTML = '';
+    if (!invBox.firstChild) {
+      const d = doors.inv;
+      invBox.innerHTML = `<form novalidate>
+        <span class="eyebrow blue">${d.eyebrow}</span>
+        <h2 class="h2 display">Investor inquiry</h2>
+        ${d.form}
+      </form>`;
+      wire($('form', invBox));
+    }
+    capital.hidden = false;
+    $('#capital').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const show = key => {
+    if (key === 'inv' && capital && invBox) return showCapital();
+    if (capital) capital.hidden = true;
     const d = doors[key];
     open = key;
-    $$('.doors4 [data-door]').forEach(a => { const on = a.dataset.door === key; a.classList.toggle('on', on); a.setAttribute('aria-expanded', String(on)); });
+    mark(key);
     panel.className = `door-panel dp-${d.tone}`;
     panel.innerHTML = `
       <button class="dp-x" type="button" aria-label="Close">×</button>
@@ -118,22 +156,19 @@
       </form></div>`;
     panel.hidden = false;
 
-    const form = $('form', panel);
     $('.dp-x', panel).addEventListener('click', close);
-    $$('[data-reset]', panel).forEach(b => b.addEventListener('click', () => {
-      form.reset(); $('.done', form).hidden = true;
-      $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = false);
-    }));
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const missing = $$('[required]', form).filter(el => !el.value.trim() || (el.type === 'email' && !el.checkValidity()));
-      $$('.bad', form).forEach(el => el.classList.remove('bad'));
-      if (missing.length) { missing.forEach(el => el.closest('.f').classList.add('bad')); missing[0].focus(); return; }
-      $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = true);
-      $('.done', form).hidden = false;
-    });
+    wire($('form', panel));
     panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  // "Smart money" in the menu and footer opens the Capital half too
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href="#capital"]');
+    if (!a || a.closest('.doors4')) return;
+    e.preventDefault();
+    const x = $('#menuClose'); if (x && x.offsetParent) x.click();
+    show('inv');
+  });
 
   $$('.doors4 [data-door]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault();

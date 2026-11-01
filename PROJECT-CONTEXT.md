@@ -42,8 +42,12 @@ can continue the work without having heard them.
 | Who we look for | American business salespeople and independent agents, tech sales or business backgrounds, experience in area distribution and capital formation |
 | Two kinds of rep | Superseded 2026-10-19: all reps are social media influencers / reps (card 02). Was: network reps and social media reps who can sell anywhere |
 | Smart money | Investment from businesses whose interests line up with the company raising it. iPost: sports apparel, sporting goods, energy drinks. IoT Data Group: telecom providers, systems integrators, low voltage contractors. CTA (Fran, 2026-10-20): described as a platform customized for small and mid-size businesses up to entire portfolios, with a uniform dashboard-driven agentic CRM; Sam's private equity investor example removed. All portfolio companies are open to investment |
-| Portfolio | Every company on the current site, in one clean logo grid |
-| Team | Bios and photos from the current site for now |
+| Portfolio | Every company on the current site, in one clean logo grid. Block Battery and BlackMP stay (Fran, 2026-10-31) |
+| Team | Bios and photos from the current site for now. Fran's title is Chairman and CEO; Zack Zeiler stays as Director (Fran, 2026-10-31) |
+| Landing doors | First screen is a landing page: four big doors side by side under one roof. Master Distributors, Master Agents and Agents are all-American; Strategic Investors is elegant money with a little American (Fran, 2026-10-31) |
+| Master Distributor | Heads a region (one of the three); a Master Agent heads one state. Door line: "Head a region". The door opens its own section with Fran's three questions: syndicated investment projects, dealers and distributors in one of the three regions, interest in Basic American (Fran, 2026-10-31) |
+| Master Agent | Statewide Master Agent, recruiter and director of Agents and Influencers (Fran, 2026-10-31) |
+| Hero line "Invest in American business" | Stays until Fran's attorney reviews the investor wording, with "ROI" (Fran, 2026-10-31) |
 | BAE logo | Fran asked for new options. Three are in `review/bae-logo-options.html`: A star shield, B stripe wordmark, C seal |
 | BAI look | Red, white and blue plus black, purple and gold. New BAI logo still to make |
 | Family of brands | Removed the "One parent, three names" section and its menu and footer links (Fran, 2026-10-19). BAI and BAN still appear elsewhere on the page |
@@ -83,6 +87,8 @@ can continue the work without having heard them.
 - ~~Fran's written distribution piece~~ Done 2026-10-20 (rep pay wording); capital section done 2026-10-19.
 - The logo pick (A, B, C or a mix). Then make it a clean SVG for the nav, footer and browser tab.
 - One-line descriptions for BAN, Block Battery and BlackMP in the portfolio.
+- ~~What a Master Distributor is~~ Done 2026-10-31: heads a region (Master Agents head one state).
+- Master Distributor choice in the rep sign-up form: not now (Fran, 2026-10-31). The Master Distributors Sign up button still goes to the rep form.
 - The amber dashed "Waiting on Fran" boxes on the page mark each gap. Remove a box when its text lands.
 
 ## Going live (later, plan only)

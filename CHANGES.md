@@ -21,6 +21,12 @@ Updated 2026-10-20.
 | 36 | 10-20 | Distribution flag made elegant: real five-point stars (were dots), Old Glory red and navy, 13 true stripes with the blue field over 7, a satin sheen, and a framed card in navy and red | Fran | Current |
 | 40 | 10-21 | Hero, under the mission line: two arched doorways under one navy roof ("Basic American Enterprises" in gold on the pediment). Left door Distribution (starry navy, stripes at the threshold) to the Distribution part; right door Capital (Big Sur, regal) to the Capital part. Replaces the "Find your state" and "Smart money" buttons | Fran | Current |
 | 41 | 10-21 | On phones the opener titles (Distribution, Companies, Capital) fit on one line; "Distribution" no longer breaks | Claude | Current |
+| 43 | 10-31 | Hero landing doors: four big arched doors side by side under the roof, right under the headline ("Which door is yours?"). Master Distributors, Master Agents, Agents in all-American navy stars and stripes; Strategic Investors in the elegant coast look (Cinzel, gold) with a thin red-white-blue line. Master Agents and Agents open the rep sign-up with that seat picked; Master Distributors goes to Distribution; Investors go to Capital. Replaces the two doors of row 40 | Fran | Current |
+| 44 | 10-31 | Master Distributors door: "Waiting on Fran" box | "Head a region" | Fran | Current |
+| 45 | 10-31 | Master Distributors door led to Distribution | New Master Distributors section right after the Distribution opener: "Head a region", Fran's three questions, Sign up button; the door opens it | Fran | Current |
+| 46 | 10-31 | Master Agents door: "Head one state" | "Statewide Master Agent, recruiter and director of Agents and Influencers" | Fran | Current |
+| 47 | 10-31 | "How the network is built": Regional lead, Master rep, Network agents | Master Distributor (one per region), Master Agent (statewide; recruits and directs Agents and Influencers), Agents and Influencers (under each Master Agent) | Fran | Current |
+| 48 | 10-31 | Map text, state box, map notes, "Who we are looking for" heading, "Every state is open" line: regional lead, master rep, network agents | Master Distributor, Master Agent, Agents and Influencers | Fran | Current |
 | 27 | 10-20 | Black night map of the US removed. One map only: the interactive "Find your state" map. The rep program section now runs full width with no picture; the hero "Reps" card shows the team photo instead | Fran | Current |
 
 ## Words
@@ -48,6 +54,7 @@ Updated 2026-10-20.
 | 38 | 10-20 | Diligence step 03: Matched to a company | Matched to a company through our regional investor network | Fran | Current |
 | 39 | 10-20 | Hero: Hard work, logic, faith and excellence is our mission. Two halves, in this order: distribution, then capital. | Hard work, logic, faith and excellence is our mission. | Fran | Current |
 | 35 | 10-20 | Hero tags "01 · Distribution" and "02 · Capital" | Removed | Fran | Current |
+| 42 | 10-31 | Fran McGrath: Chairman | Fran McGrath: Chairman and CEO | Fran | Current |
 
 ## New sections
 

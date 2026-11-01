@@ -135,6 +135,8 @@
     if (el.dataset.note === 'rep' || el.getAttribute('href') === '#signup-reps') {
       const code = el.querySelector('#spCta') ? stateFromCta() : '';
       if (code) { const sel = $('select[name="state"]', repDlg); sel.value = code; sel.dispatchEvent(new Event('change')); }
+      const seat = el.dataset.seat && $(`input[name="seat"][value="${el.dataset.seat}"]`, repDlg);
+      if (seat) seat.checked = true;
       go($('#signup-reps'), $('input[name="seat"]:checked', repDlg));
     } else {
       go($('#signup-companies'), $('input[name="company"]', coDlg));

@@ -119,7 +119,7 @@
     $('#spLead').textContent = 'Open';
     $('#spRepsLabel').textContent = `Reps in ${s.name}`;
     listReps(REPS[s.code] || [], 'Open territory. Be the first.');
-    $('#spNote').textContent = `${s.name} needs a master rep, with network agents under them across the state. The master sees every ${s.name} lead.`;
+    $('#spNote').textContent = `${s.name} needs a Master Agent, with Agents and Influencers under them across the state. The Master Agent sees every ${s.name} lead.`;
     $('#spCta').textContent = `Sign up for ${s.name}`;
     $('#statePanel').classList.remove('flash'); void $('#statePanel').offsetWidth; $('#statePanel').classList.add('flash');
   };
@@ -137,7 +137,7 @@
     $('#spLead').textContent = 'Open';
     $('#spRepsLabel').textContent = `Reps in the ${r.name}`;
     listReps(named, `All ${inRegion.length} states open. Be the first.`);
-    $('#spNote').textContent = `A regional lead runs the ${r.name} from ${r.office.split(',')[0]}, with a master rep in each of its ${inRegion.length} states. Click a state.`;
+    $('#spNote').textContent = `A Master Distributor runs the ${r.name} from ${r.office.split(',')[0]}, with a Master Agent in each of its ${inRegion.length} states. Click a state.`;
     $('#spCta').textContent = `Sign up in the ${r.name}`;
   }));
 

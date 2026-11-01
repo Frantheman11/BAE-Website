@@ -22,7 +22,7 @@
       <button class="btn btn-blue" type="submit"><span class="ico">→</span> ${label}</button>
     </div>
     <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your details now and you pick a time for a call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>`;
-  const repPay = 'Reps earn subscription and referral commissions, plus gross margin on resale items, on the customers they bring in from their state. Commissions are paid electronically every month.';
+  const repPay = 'Reps earn subscription and referral commissions, plus gross margin on resale items, on the customers they bring in. Commissions are paid electronically every month.';
 
   const doors = {
     md: {

@@ -33,6 +33,8 @@ Updated 2026-10-20.
 | 52 | 10-31 | Doors jumped to sections or the rep form | Each door opens a panel right under the doors: brief explainer, then that door's inquiry form (Master Distributors, Master Agents, Agents, Strategic Investors). Another door swaps it; the same door or × closes it. New short investor inquiry (region, company, contact, interests; no amounts). Draft: nothing sends (`assets/doors.js`) | Fran | Current |
 | 53 | 10-31 | Opening line: "A network of professional representation in every state, and smart money behind the companies we are growing together." | "A network of technologists, professional representation, business, smart strategic capital, and the American Entrepreneurial Spirit." | Fran | Current |
 | 54 | 10-31 | White rotating card under the opening line (Reps / Companies / Investors) | Removed | Fran | Current |
+| 55 | 10-31 | Plain navy roof over the doors | More elegant: navy roof with a soft gold edge and one fine inner gold line, gold dentil band under the roof, cream "Which door is yours?" frieze with gold rules, double gold trim around each arch, gold side and base lines. No ornament at the peak. All gold on the house toned down by half | Fran | Current |
+| 56 | 10-31 | Become a rep: "...on the customers they bring in from their state." | "...on the customers they bring in." (also in the Master Agents and Agents door panels) | Fran | Current |
 | 27 | 10-20 | Black night map of the US removed. One map only: the interactive "Find your state" map. The rep program section now runs full width with no picture; the hero "Reps" card shows the team photo instead | Fran | Current |
 
 ## Words

@@ -815,3 +815,58 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 .door-panel .form-dlg form { padding: clamp(18px, 3vw, 28px); }
 .form-dlg .seats.seats2 { grid-template-columns: 1fr 1fr; }
 @media (max-width: 860px) { .door-panel { grid-template-columns: 1fr; } }
+
+/* Elegant house (Fran, 2026-10-31): gold-trimmed pediment with a star finial, gold cornice, gold-trimmed doors */
+.doors4 .roof { clip-path: none; filter: drop-shadow(0 8px 12px rgba(11,31,68,.28)); overflow: visible; margin-top: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E'/%3E%3Cpolygon points='14,100 500,5 986,100' fill='%230B1F44'/%3E%3Cpolyline points='70,94 500,18 930,94 70,94' fill='none' stroke='%23D9BF7A' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+.doors4 .roof::after { content: "★"; position: absolute; left: 50%; top: -17px; transform: translateX(-50%); color: var(--gold);
+  font-size: 22px; line-height: 1; text-shadow: 0 1px 0 rgba(255,255,255,.6), 0 2px 6px rgba(11,31,68,.3); }
+.doors4 .roof span { position: relative; z-index: 1; color: var(--gold-2); text-shadow: 0 1px 2px rgba(0,0,0,.35); }
+.doors4 .roof span::before, .doors4 .roof span::after { content: "✦"; color: var(--gold); margin: 0 .7em; font-size: .85em; letter-spacing: 0; }
+.doors4 .pick { position: relative; background: #FFFDF7; padding: 12px 10px 12px;
+  border-top: 4px double var(--gold); border-bottom: 1px solid var(--gold-2); border-left: 1px solid var(--gold-2); border-right: 1px solid var(--gold-2); }
+.doors4 .pick::before, .doors4 .pick::after { content: ""; display: inline-block; vertical-align: middle; width: clamp(18px, 4vw, 54px); height: 1px; background: var(--gold); margin: 0 14px; }
+.doors4 .doors-row { padding-top: clamp(14px, 2.4vw, 26px); border-left: 1px solid var(--gold-2); border-right: 1px solid var(--gold-2);
+  border-bottom: 10px solid var(--navy); box-shadow: inset 0 -3px 0 var(--gold), 0 24px 60px rgba(14,15,19,.22); }
+.doors4 .split-dist { outline: 2px solid var(--gold-2); outline-offset: 0; box-shadow: inset 0 0 0 1px rgba(217,191,122,.7); }
+.doors4 .split-dist .sp-star { color: var(--gold-2); }
+.doors4 .split-dist .sp-go { border-color: var(--gold-2); }
+.doors4 [data-door].on { outline: 3px solid var(--gold); outline-offset: 3px; }
+@media (max-width: 520px) { .doors4 .roof span::before, .doors4 .roof span::after { margin: 0 .4em; } .doors4 .pick::before, .doors4 .pick::after { width: 14px; margin: 0 8px; } }
+.doors4 .roof { height: clamp(78px, 9vw, 124px); padding-bottom: 14px; margin-top: 26px; }
+.doors4 .roof::after { font-size: clamp(22px, 2.4vw, 32px); top: clamp(-24px, -2vw, -16px); }
+@media (max-width: 520px) {
+  .doors4 .roof span { letter-spacing: .12em; font-size: 10px; }
+  .doors4 .roof span::before, .doors4 .roof span::after { display: none; }
+  .doors4 .doors-row a { min-height: 230px; padding-bottom: 72px; }
+}
+
+/* Ornate, not ornament (Fran, 2026-10-31): no star at the peak; classical moldings, dentils and double gold trim instead */
+.doors4 .roof::after { content: none; }
+.doors4 .roof { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E'/%3E%3Cpolygon points='12,100 500,4 988,100' fill='%23D9BF7A'/%3E%3Cpolygon points='22,100 500,8 978,100' fill='%230B1F44'/%3E%3Cpolyline points='70,93 500,17 930,93 70,93' fill='none' stroke='%23D9BF7A' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3Cpolyline points='110,88 500,25 890,88 110,88' fill='none' stroke='%23B08D3E' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+.doors4 .pick { border-top: 0; padding-top: 24px;
+  background:
+    linear-gradient(var(--gold), var(--gold)) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, var(--gold-2) 0 9px, transparent 9px 15px) 0 4px / 100% 8px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) 0 14px / 100% 1px no-repeat,
+    #FFFDF7; }
+.doors4 .pick::before, .doors4 .pick::after { height: 0; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); padding-top: 2px; }
+.doors4 .doors-row { box-shadow: inset 0 -3px 0 var(--gold), inset 0 -6px 0 #fff, inset 0 -7px 0 var(--gold-2), 0 24px 60px rgba(14,15,19,.22); padding-bottom: 7px; }
+.doors4 .doors-row a, .doors4 .split-dist, .doors4 .split-cap { outline: 0;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 5px #fff, 0 0 0 6px var(--gold-2), inset 0 0 0 1px rgba(217,191,122,.8); }
+.doors4 [data-door].on { outline: 3px solid var(--blue); outline-offset: 8px; }
+.doors4 .roof span::before, .doors4 .roof span::after { content: none; }
+
+/* Gold toned down by half on the house (Fran, 2026-10-31) */
+.doors4 { --gold: rgba(176,141,62,.5); --gold-2: rgba(217,191,122,.5); }
+.doors4 .roof { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E' fill-opacity='.5'/%3E%3Cpolygon points='12,100 500,4 988,100' fill='%23D9BF7A' fill-opacity='.5'/%3E%3Cpolygon points='22,100 500,8 978,100' fill='%230B1F44'/%3E%3Cpolyline points='70,93 500,17 930,93 70,93' fill='none' stroke='%23D9BF7A' stroke-opacity='.5' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3Cpolyline points='110,88 500,25 890,88 110,88' fill='none' stroke='%23B08D3E' stroke-opacity='.5' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+.doors4 .roof span { color: rgba(217,191,122,.8); }
+.doors4 .doors-row a, .doors4 .split-dist, .doors4 .split-cap { box-shadow: 0 0 0 2px var(--gold), 0 0 0 5px #fff, 0 0 0 6px var(--gold-2), inset 0 0 0 1px rgba(217,191,122,.4); }
+
+/* Roof: just a little gold accent (Fran, 2026-10-31): plain navy, one thin soft gold edge, original height */
+.doors4 .roof { height: clamp(64px, 8vw, 96px); padding-bottom: 12px; margin-top: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E' fill-opacity='.5'/%3E%3Cpolygon points='8,100 500,3 992,100' fill='%230B1F44'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+/* Roof: a little more accent (Fran, 2026-10-31): slightly thicker soft gold edge plus one fine inner line */
+.doors4 .roof { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E' fill-opacity='.6'/%3E%3Cpolygon points='14,100 500,5 986,100' fill='%230B1F44'/%3E%3Cpolyline points='80,92 500,19 920,92' fill='none' stroke='%23D9BF7A' stroke-opacity='.45' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+/* Roof: a little more gold again (Fran, 2026-10-31) */
+.doors4 .roof { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E' fill-opacity='.8'/%3E%3Cpolygon points='18,100 500,6 982,100' fill='%230B1F44'/%3E%3Cpolyline points='80,92 500,20 920,92' fill='none' stroke='%23D9BF7A' stroke-opacity='.7' stroke-width='1.25' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }

@@ -89,6 +89,14 @@
           <label class="f"><span>Company or firm</span><input name="company" autocomplete="organization"></label>
         </div>
         ${contact}
+        <fieldset class="accredited"><legend>Are you an accredited investor?</legend>
+          <p class="acc-note">An accredited investor meets the SEC's income, net worth or professional tests for private investments. For individuals, that generally means a high income in each of the last two years, a high net worth not counting your home, or certain financial licenses. Firms can qualify too. We confirm status before any offering documents are shared.</p>
+          <div class="chips">
+            <label><input type="radio" name="accredited" value="yes"><span>Yes</span></label>
+            <label><input type="radio" name="accredited" value="no"><span>No</span></label>
+            <label><input type="radio" name="accredited" value="not-sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
         <label class="f"><span>Companies or industries that interest you</span><textarea name="interest" rows="3"></textarea></label>
         ${foot('Request a call with Fran')}`
     }

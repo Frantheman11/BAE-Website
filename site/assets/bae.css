@@ -882,3 +882,6 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 .signup-investors { background: #FFFDF7; }
 .signup-investors .form-dlg { border-top: 8px solid var(--gold); }
 #capital { scroll-margin-top: 72px; }
+
+/* Investor inquiry: accredited investor question (Fran, 2026-10-31); wording waits for the attorney */
+.form-dlg .accredited .acc-note { margin: -2px 0 6px; color: var(--mute); font-size: 14px; line-height: 1.5; max-width: 70ch; }

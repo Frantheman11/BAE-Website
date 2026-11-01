@@ -9,44 +9,7 @@
 
   const stateOptions = states.map(s => `<option value="${s.code}">${s.name}</option>`).join('');
 
-  const rep = `
-  <section class="signup signup-reps" id="signup-reps" aria-labelledby="repTitle"><div class="wrap"><div class="form-dlg" id="repForm">
-    <form novalidate>
-      <span class="eyebrow">Rep sign-up</span>
-      <h2 id="repTitle" class="h2 display">Master agents, professional agents and social network agents: sign up</h2>
-      <p class="lead">Tell us who you are and the seat you want. Fran screens every rep on a call.</p>
-
-      <fieldset><legend>I want to be a</legend>
-        <div class="seats">
-          <label><input type="radio" name="seat" value="master-agent"><span><b>Master agent</b><small>Heads one state</small></span></label>
-          <label><input type="radio" name="seat" value="professional-agent" checked><span><b>Professional agent</b><small>Sells face to face: meetings, handshakes, trade shows</small></span></label>
-          <label><input type="radio" name="seat" value="social-network-agent"><span><b>Social network agent</b><small>Sells through your social media following</small></span></label>
-        </div>
-      </fieldset>
-
-      <div class="row2">
-        <label class="f"><span>State</span><select name="state" required><option value="">Choose a state</option>${stateOptions}</select><small class="region-hint" aria-live="polite"></small></label>
-        <label class="f"><span>Years in sales</span><select name="years"><option value="">Choose</option><option>Under 2</option><option>2 to 5</option><option>5 to 10</option><option>10 or more</option></select></label>
-      </div>
-      <div class="row2">
-        <label class="f"><span>Full name</span><input name="name" autocomplete="name" required></label>
-        <label class="f"><span>Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
-      </div>
-      <label class="f"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
-      <label class="f"><span>What you sell today</span><input name="sells" placeholder="Products, services or industries"></label>
-      <div class="row2">
-        <label class="f"><span>Main social platform</span><select name="platform"><option value="">Choose</option><option>LinkedIn</option><option>Instagram</option><option>Facebook</option><option>YouTube</option><option>TikTok</option><option>X</option><option>Other</option></select></label>
-        <label class="f"><span>Your handle or page</span><input name="handle" placeholder="@yourname"></label>
-      </div>
-      <label class="f"><span>Who you know in your market</span><textarea name="network" rows="3" placeholder="Industries, companies, associations, trade shows"></textarea></label>
-
-      <div class="foot">
-        <p class="fine">Draft form: nothing is sent yet. On the live site this goes to Fran, then you pick a time on his calendar.</p>
-        <button class="btn btn-blue" type="submit"><span class="ico">→</span> Request a call with Fran</button>
-      </div>
-      <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your details now and you pick a time for your call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>
-    </form>
-  </div></div></section>`;
+  // The rep sign-up section was removed (Fran, 2026-10-31): rep buttons open a landing door panel instead (doors.js)
 
   const company = `
   <section class="signup signup-companies" id="signup-companies" aria-labelledby="coTitle"><div class="wrap"><div class="form-dlg" id="coForm">
@@ -92,8 +55,7 @@
     </form>
   </div></div></section>`;
 
-  // Each form is its own section: reps close the Distribution half, companies follow the portfolio
-  ($('#join') || document.body).insertAdjacentHTML('afterend', rep);
+  // The company form is its own section, after the portfolio
   ($('#portfolio') || document.body).insertAdjacentHTML('afterend', company);
 
   const setup = dlg => {
@@ -109,14 +71,8 @@
       $('.done', dlg).hidden = false;
     });
   };
-  const repDlg = $('#repForm'), coDlg = $('#coForm');
-  setup(repDlg); setup(coDlg);
-
-  const hint = $('.region-hint', repDlg);
-  $('select[name="state"]', repDlg).addEventListener('change', e => {
-    const s = states.find(x => x.code === e.target.value);
-    hint.textContent = s ? `${regionName[s.region] || ''} region` : '';
-  });
+  const coDlg = $('#coForm');
+  setup(coDlg);
 
   // The map remembers the state last clicked, through the "Sign up for <State>" button text
   const stateFromCta = () => {
@@ -133,11 +89,10 @@
     if (!el) return;
     e.preventDefault(); e.stopImmediatePropagation();
     if (el.dataset.note === 'rep' || el.getAttribute('href') === '#signup-reps') {
+      // The map's state button opens the Master Agents door with that state picked; other rep links open Agents
+      const close = $('#menuClose'); if (close && close.offsetParent) close.click();
       const code = el.querySelector('#spCta') ? stateFromCta() : '';
-      if (code) { const sel = $('select[name="state"]', repDlg); sel.value = code; sel.dispatchEvent(new Event('change')); }
-      const seat = el.dataset.seat && $(`input[name="seat"][value="${el.dataset.seat}"]`, repDlg);
-      if (seat) seat.checked = true;
-      go($('#signup-reps'), $('input[name="seat"]:checked', repDlg));
+      if (window.BAEdoors) window.BAEdoors.open(el.querySelector('#spCta') ? 'ma' : 'ag', { state: code });
     } else {
       go($('#signup-companies'), $('input[name="company"]', coDlg));
     }

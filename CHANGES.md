@@ -35,6 +35,13 @@ Updated 2026-10-20.
 | 54 | 10-31 | White rotating card under the opening line (Reps / Companies / Investors) | Removed | Fran | Current |
 | 55 | 10-31 | Plain navy roof over the doors | More elegant: navy roof with a soft gold edge and one fine inner gold line, gold dentil band under the roof, cream "Which door is yours?" frieze with gold rules, double gold trim around each arch, gold side and base lines. No ornament at the peak. All gold on the house toned down by half | Fran | Current |
 | 56 | 10-31 | Become a rep: "...on the customers they bring in from their state." | "...on the customers they bring in." (also in the Master Agents and Agents door panels) | Fran | Current |
+| 57 | 10-31 | "How the network is built" panel (Master Distributor, Master Agent, Agents and Influencers) next to The ideal rep | Removed; The ideal rep card takes the full width | Fran | Current |
+| 58 | 10-31 | Repeats: Master Distributors section, the big rep sign-up form section, the "3 levels" label | Removed. "Sign up as a rep", the menu and footer "Rep sign-up" open the Agents door panel; the map's state button opens the Master Agents door with that state picked. Company sign-up unchanged | Fran | Current |
+| 59 | 10-31 | Clear Insights AI: "Sold to: established companies" | "Sold to: established manufacturing companies and distributors with at least 1,000 customers and 1,000 SKUs" | Fran | Current |
+| 60 | 10-31 | iPost Sports: "Sold to: leagues, schools and athletic directors" | "Sold to: sports leagues, sports complexes, high school and college sports programs, Little League, and travel and club programs" | Fran | Current |
+| 61 | 10-31 | IoT Data Group: "Sold to: businesses that buy telecom" | "Sold to: businesses, first responders and municipal governments with special requirements in communication, security, telecom, cloud and access" | Fran | Current |
+| 62 | 10-31 | Basic American Networks: "Sold to: carriers, cities, enterprise and mid-size businesses" | "Sold to: small, mid-size and enterprise businesses, first responders and municipal governments with special requirements in communication, security, telecom, cloud and access" | Fran | Current |
+| 63 | 10-31 | "How to start: From sign-up to first sale" section with its four step boxes and the "Every state is open" line | Removed; the product cards now lead straight into Companies | Fran | Current |
 | 27 | 10-20 | Black night map of the US removed. One map only: the interactive "Find your state" map. The rep program section now runs full width with no picture; the hero "Reps" card shows the team photo instead | Fran | Current |
 
 ## Words

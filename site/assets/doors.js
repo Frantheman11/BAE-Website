@@ -139,4 +139,13 @@
     e.preventDefault();
     a.dataset.door === open ? close() : show(a.dataset.door);
   }));
+
+  // Rep buttons elsewhere on the page open a door here (forms.js), with a state picked when the map knows it
+  window.BAEdoors = {
+    open(key, { state } = {}) {
+      show(key);
+      const sel = state && $('select[name="state"]', panel);
+      if (sel) sel.value = state;
+    }
+  };
 })();

@@ -870,3 +870,6 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 .doors4 .roof { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E' fill-opacity='.6'/%3E%3Cpolygon points='14,100 500,5 986,100' fill='%230B1F44'/%3E%3Cpolyline points='80,92 500,19 920,92' fill='none' stroke='%23D9BF7A' stroke-opacity='.45' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
 /* Roof: a little more gold again (Fran, 2026-10-31) */
 .doors4 .roof { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 500,0 1000,100' fill='%23B08D3E' fill-opacity='.8'/%3E%3Cpolygon points='18,100 500,6 982,100' fill='%230B1F44'/%3E%3Cpolyline points='80,92 500,20 920,92' fill='none' stroke='%23D9BF7A' stroke-opacity='.7' stroke-width='1.25' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+
+/* "How the network is built" removed (Fran, 2026-10-31): the ideal rep card takes the full width */
+.who-grid { grid-template-columns: 1fr; }

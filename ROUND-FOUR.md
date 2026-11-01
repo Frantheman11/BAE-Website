@@ -61,3 +61,4 @@ then open http://127.0.0.1:8821 (Python is not installed on the laptop, so Sam's
 - 2026-10-31: First screen is a landing page (Fran): four big doors side by side: Master Distributors, Master Agents, Agents (all-American) and Strategic Investors (elegant money, a little American). A version with closed door frames and steps was tried and dropped: Fran liked the first look better. What a Master Distributor is still needs Fran's one line.
 - 2026-10-31: Master Distributors door now reads "Head a region" (Fran); the amber box is gone.
 - 2026-10-20: One map only (Fran): the still light map is removed from the rep program section (now full width) and the hero Reps card (now the team photo). assets/us-map-light.svg is unused.
+- 2026-10-31: Deep diligence section removed (Fran); its draft criteria and steps no longer need confirming. Still open: logo pick, Block Battery and BlackMP lines.

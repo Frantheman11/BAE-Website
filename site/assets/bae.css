@@ -362,11 +362,6 @@ dialog.note .actions { margin-top: 20px; display: flex; gap: 10px; justify-conte
 
 /* Reps as local influencers */
 .voice { background: var(--bg-2); }
-.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.trio .step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: grid; gap: 12px; align-content: start; box-shadow: var(--shadow); }
-.trio .k { font-family: var(--display); font-variation-settings: "wdth" 112; font-weight: 800; font-size: 30px; color: var(--red); }
-.trio h3 { font-size: 22px; }
-.trio p { color: var(--mute); font-size: 17px; }
 .promise { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(22px, 3vw, 36px); box-shadow: var(--shadow); }
 .promise .label { display: block; font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--dim); margin-bottom: 12px; }
 .promise ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -459,12 +454,6 @@ dialog.note .actions { margin-top: 20px; display: flex; gap: 10px; justify-conte
 .who-card ul, .ex ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .who-card li, .ex li { display: flex; gap: 12px; font-size: 17px; }
 .who-card li::before { content: "★"; color: var(--red); font-size: 14px; padding-top: 3px; }
-.tree .lvl { display: grid; gap: 2px; padding: 14px 18px; border-radius: 12px; background: var(--bg); border-left: 5px solid var(--red); }
-.tree .lvl b { font-size: 18px; }
-.tree .lvl span { color: var(--mute); font-size: 16px; }
-.tree .l2 { margin-left: clamp(12px, 2vw, 28px); border-left-color: rgba(213,18,28,.7); }
-.tree .l3 { margin-left: clamp(24px, 4vw, 56px); border-left-color: rgba(213,18,28,.45); }
-.tree-note { color: var(--mute); font-size: 16px; }
 @media (max-width: 900px) { .who-grid { grid-template-columns: 1fr; } }
 
 /* Smart money examples */
@@ -789,10 +778,6 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
   .doors4 .split-dist .sp-go, .doors4 .split-cap .sp-go { padding: 7px 16px; font-size: 13px; }
 }
 
-/* Master Distributors section (Fran, 2026-10-31): Fran's three questions, red star bullets */
-.md-qs { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: 720px; }
-.md-qs li { position: relative; padding-left: 28px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.45; color: var(--ink); }
-.md-qs li::before { content: "★"; position: absolute; left: 0; top: 0; color: var(--red); }
 
 /* Door panel (Fran, 2026-10-31): opens under the doors; brief explainer, then the inquiry form */
 .doors4 [data-door].on { outline: 3px solid var(--blue); outline-offset: 3px; }
@@ -886,13 +871,19 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 /* Investor inquiry: accredited investor question (Fran, 2026-10-31); wording waits for the attorney */
 .form-dlg .accredited .acc-note { margin: -2px 0 6px; color: var(--mute); font-size: 14px; line-height: 1.5; max-width: 70ch; }
 
-/* Talk to Fran, moved below Three core ingredients (Fran, 2026-10-31) */
-.talk-fran { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: clamp(32px, 5vw, 56px);
-  background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(18px, 3vw, 28px); box-shadow: var(--shadow); }
-.talk-fran .mission { margin: 0; font-size: 18px; color: var(--mute); }
-.talk-fran .mission b { color: var(--ink); }
 #investorInquiry { scroll-margin-top: 72px; }
 
 /* Team photos smaller (Fran, 2026-10-31): small round portraits instead of full-width squares */
 .person .photo { width: 112px; height: 112px; aspect-ratio: auto; border-radius: 999px; }
 @media (max-width: 520px) { .person { grid-template-columns: 88px 1fr; align-items: center; } .person .photo { width: 88px; height: 88px; } .person p { grid-column: 1 / -1; } }
+
+/* Company sign-up made smaller (Fran, 2026-10-31): narrower, tighter, smaller heading and fields */
+.signup-companies { padding: clamp(36px, 5vw, 64px) 0; }
+.signup-companies .form-dlg { max-width: 680px; }
+.signup-companies .form-dlg form { padding: clamp(18px, 3vw, 26px); gap: 12px; }
+.signup-companies .form-dlg h2 { font-size: clamp(22px, 2.8vw, 32px); }
+.signup-companies .form-dlg .lead { font-size: 15px; margin: 0; }
+.signup-companies .form-dlg input:not([type=checkbox]):not([type=radio]), .signup-companies .form-dlg select, .signup-companies .form-dlg textarea { padding: 9px 12px; font-size: 15px; }
+.signup-companies .form-dlg .chips label span { padding: 7px 12px; font-size: 14px; }
+.signup-companies .form-dlg .f > span, .signup-companies .form-dlg legend { font-size: 13px; }
+.signup-companies .form-dlg textarea { min-height: 0; }

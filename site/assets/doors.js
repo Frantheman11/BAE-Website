@@ -82,7 +82,7 @@
     inv: {
       tone: 'cap', eyebrow: 'Strategic Investors', title: 'Smart money for smart American companies',
       explain: `<p>Smart money is investment from businesses whose interests line up with the company raising it.</p>
-        <p>Every company in our portfolio is open to smart money. Smart money can also be regional: investors in a company's own market, reached through our regional investor network across the West, Central and East regions.</p>`,
+        <p>Every company we represent is open to smart money. Smart money can also be regional: investors in a company's own market, reached through our regional investor network across the West, Central and East regions.</p>`,
       form: `
         <div class="row2">
           <label class="f"><span>Region</span>${regionSel}</label>
@@ -108,6 +108,7 @@
   const wire = form => {
     $$('[data-reset]', form).forEach(b => b.addEventListener('click', () => {
       form.reset(); $('.done', form).hidden = true;
+      $$('.bad', form).forEach(el => el.classList.remove('bad'));
       $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = false);
     }));
     form.addEventListener('submit', e => {
@@ -185,10 +186,12 @@
 
   // Rep buttons elsewhere on the page open a door here (forms.js), with a state picked when the map knows it
   window.BAEdoors = {
-    open(key, { state } = {}) {
+    open(key, { state, region } = {}) {
       show(key);
       const sel = state && $('select[name="state"]', panel);
       if (sel) sel.value = state;
+      const reg = region && $('select[name="region"]', panel);
+      if (reg) reg.value = region;
     }
   };
 })();

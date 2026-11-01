@@ -16,13 +16,13 @@
     <form novalidate>
       <span class="eyebrow blue">Company sign-up</span>
       <h2 id="coTitle" class="h2 display">Companies seeking participation</h2>
-      <p class="lead">For founders with an innovative product who want a channel, capital or both.</p>
+      <p class="lead">For founders who want a channel, need to raise capital, or both.</p>
 
       <div class="row2">
         <label class="f"><span>Company name</span><input name="company" autocomplete="organization" required></label>
         <label class="f"><span>Website</span><input name="website" type="url" placeholder="https://"></label>
       </div>
-      <label class="f"><span>What you make or sell</span><textarea name="product" rows="2" required></textarea></label>
+      <label class="f"><span>What you make or sell</span><input name="product" required></label>
       <div class="row2">
         <label class="f"><span>Stage</span><select name="stage"><option value="">Choose</option><option>Idea</option><option>Product built, early customers</option><option>Growing revenue</option><option>Established</option></select></label>
         <label class="f"><span>State</span><select name="state"><option value="">Choose a state</option>${stateOptions}</select></label>
@@ -45,7 +45,7 @@
         <label class="f"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
         <label class="f"><span>Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
       </div>
-      <label class="f"><span>Anything else</span><textarea name="note" rows="2"></textarea></label>
+      <label class="f"><span>Anything else</span><input name="note"></label>
 
       <div class="foot">
         <p class="fine">Draft form: nothing is sent yet. On the live site this goes to Fran, then you pick a time on his calendar.</p>
@@ -55,7 +55,7 @@
     </form>
   </div></div></section>`;
 
-  // The company form is its own section, after the portfolio
+  // The company form is its own section, after the #portfolio anchor (the Portfolio grid itself was removed)
   ($('#portfolio') || document.body).insertAdjacentHTML('afterend', company);
 
   const setup = dlg => {
@@ -89,10 +89,13 @@
     if (!el) return;
     e.preventDefault(); e.stopImmediatePropagation();
     if (el.dataset.note === 'rep' || el.getAttribute('href') === '#signup-reps') {
-      // The map's state button opens the Master Agents door with that state picked; other rep links open Agents
+      // The map's button: a state opens Master Agents with that state picked, a region opens Master Distributors
+      // with that region picked; other rep links open Agents
       const close = $('#menuClose'); if (close && close.offsetParent) close.click();
-      const code = el.querySelector('#spCta') ? stateFromCta() : '';
-      if (window.BAEdoors) window.BAEdoors.open(el.querySelector('#spCta') ? 'ma' : 'ag', { state: code });
+      const cta = el.querySelector('#spCta');
+      const region = cta && (cta.textContent.match(/^Sign up in the (West|Central|East)$/) || [])[1];
+      const code = cta && !region ? stateFromCta() : '';
+      if (window.BAEdoors) window.BAEdoors.open(region ? 'md' : cta ? 'ma' : 'ag', { state: code, region });
     } else {
       go($('#signup-companies'), $('input[name="company"]', coDlg));
     }

@@ -885,3 +885,14 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 
 /* Investor inquiry: accredited investor question (Fran, 2026-10-31); wording waits for the attorney */
 .form-dlg .accredited .acc-note { margin: -2px 0 6px; color: var(--mute); font-size: 14px; line-height: 1.5; max-width: 70ch; }
+
+/* Talk to Fran, moved below Three core ingredients (Fran, 2026-10-31) */
+.talk-fran { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: clamp(32px, 5vw, 56px);
+  background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(18px, 3vw, 28px); box-shadow: var(--shadow); }
+.talk-fran .mission { margin: 0; font-size: 18px; color: var(--mute); }
+.talk-fran .mission b { color: var(--ink); }
+#investorInquiry { scroll-margin-top: 72px; }
+
+/* Team photos smaller (Fran, 2026-10-31): small round portraits instead of full-width squares */
+.person .photo { width: 112px; height: 112px; aspect-ratio: auto; border-radius: 999px; }
+@media (max-width: 520px) { .person { grid-template-columns: 88px 1fr; align-items: center; } .person .photo { width: 88px; height: 88px; } .person p { grid-column: 1 / -1; } }

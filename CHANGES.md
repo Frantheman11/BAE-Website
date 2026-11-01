@@ -49,6 +49,8 @@ Updated 2026-10-20.
 | 68 | 10-31 | Deep diligence: "Qualifying smart money" with six criteria, four steps, a "Waiting on Fran" box and "Start your qualification with Fran" | Removed | Fran | Current |
 | 69 | 10-31 | "What it looks like: The right investor for each company" (smart money examples per company) | Removed; Three core ingredients leads into the investor inquiry | Fran | Current |
 | 70 | 10-31 | Investor inquiry did not ask about accreditation | Asks "Are you an accredited investor?" (Yes / No / Not sure) with a short plain explanation of what accredited means; no dollar thresholds (no-numbers rule). Wording waits for the attorney | Fran | Current |
+| 71 | 10-31 | Smart money: "Smart money meets smart companies. We make the match." with a Talk to Fran button | Removed as redundant with the investor inquiry | Fran | Current |
+| 72 | 10-31 | Team: "Senior team: People who have done it" heading ("4 people"), large square photos | Heading removed; photos are small round portraits (112 px; 88 px beside the name on phones) | Fran | Current |
 | 27 | 10-20 | Black night map of the US removed. One map only: the interactive "Find your state" map. The rep program section now runs full width with no picture; the hero "Reps" card shows the team photo instead | Fran | Current |
 
 ## Words

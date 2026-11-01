@@ -61,15 +61,18 @@
 <section class="hero">
   <div class="bg"><img src="assets/hero-flag-table-b.jpg" alt=""></div>
   <div class="wrap">
+    <!-- Big wordmark at the top of the first screen (Fran, 2026-10-31); was below the doors -->
+    <div class="wordmark display" aria-label="Basic American">
+      <span class="line"><span class="stars">★</span> BASIC</span>
+      <span class="line">AMERICAN</span>
+    </div>
+
     <div class="top">
       <div class="pitch">
         <span class="eyebrow">Invest in American business</span>
-        <h1 id="heroLine">A network of professional representation in every state, and smart money behind the companies we are growing together.</h1>
+        <h1 id="heroLine">A network of technologists, professional representation, business, smart strategic capital, and the American Entrepreneurial Spirit.</h1>
       </div>
-      <div class="slide" id="slide">
-        <div class="face"><img id="slideImg" src="assets/close-together.jpg" alt=""><div><b id="slideTitle">Reps</b><span id="slideSub">Fifty states, three regions</span></div></div>
-        <div class="row"><span id="slideCount">01/03</span><button class="next" id="slideNext" aria-label="Next">→</button></div>
-      </div>
+      <!-- Rotating Reps / Companies / Investors card removed (Fran, 2026-10-31) -->
     </div>
 
     <!-- Landing doors (Fran, 2026-10-31): four big doors side by side, under one roof. Three all-American
@@ -79,36 +82,33 @@
       <div class="roof"><span>Basic American Enterprises</span></div>
       <p class="pick">Which door is yours?</p>
       <div class="doors-row">
-      <a class="split-dist" href="#master-distributors">
+      <a class="split-dist" href="#doorPanel" data-door="md" aria-controls="doorPanel" aria-expanded="false">
         <span class="sp-star">★</span>
         <span class="sp-k">Master<br>Distributors</span>
         <span class="sp-s">Head a region</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
-      <a class="split-dist" href="#signup-reps" data-seat="master-agent">
+      <a class="split-dist" href="#doorPanel" data-door="ma" aria-controls="doorPanel" aria-expanded="false">
         <span class="sp-star">★</span>
         <span class="sp-k">Master<br>Agents</span>
         <span class="sp-s">Statewide Master Agent, recruiter and director of Agents and Influencers</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
-      <a class="split-dist" href="#signup-reps" data-seat="professional-agent">
+      <a class="split-dist" href="#doorPanel" data-door="ag" aria-controls="doorPanel" aria-expanded="false">
         <span class="sp-star">★</span>
         <span class="sp-k">Agents</span>
         <span class="sp-s">Professional and social network agents</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
-      <a class="split-cap" href="#capital">
+      <a class="split-cap" href="#doorPanel" data-door="inv" aria-controls="doorPanel" aria-expanded="false">
         <span class="sp-star">★</span>
         <span class="sp-k">Strategic<br>Investors</span>
         <span class="sp-s">Smart money for smart American companies</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
       </div>
-    </div>
-
-    <div class="wordmark display" aria-label="Basic American">
-      <span class="line"><span class="stars">★</span> BASIC</span>
-      <span class="line">AMERICAN</span>
+      <!-- Door panel (Fran, 2026-10-31): filled by assets/doors.js with the door's explainer, then its inquiry form -->
+      <div class="door-panel" id="doorPanel" hidden></div>
     </div>
 
     <div class="bottom">
@@ -118,9 +118,8 @@
 </section>
 
 <!-- ============ PART ONE: DISTRIBUTION ============ -->
-<div class="part red chapter flagband" id="distribution">
-  <div class="wrap"><div class="ch-card"><span class="pt display">Distribution</span><span class="cs">The rep network: fifty states, three regions.</span></div></div>
-</div>
+<!-- Flag opener "Distribution: the rep network" removed (Fran, 2026-10-31); anchor kept for menu and footer links -->
+<div id="distribution"></div>
 
 <!-- MASTER DISTRIBUTORS (Fran, 2026-10-31): the landing door opens here. Fran's three questions. -->
 <section class="about md" id="master-distributors">
@@ -466,5 +465,6 @@
 <script src="assets/us-states.js"></script>
 <script src="assets/bae.js"></script>
 <script src="assets/forms.js"></script>
+<script src="assets/doors.js"></script>
 </body>
 </html>

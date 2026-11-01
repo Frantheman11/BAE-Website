@@ -27,6 +27,12 @@ Updated 2026-10-20.
 | 46 | 10-31 | Master Agents door: "Head one state" | "Statewide Master Agent, recruiter and director of Agents and Influencers" | Fran | Current |
 | 47 | 10-31 | "How the network is built": Regional lead, Master rep, Network agents | Master Distributor (one per region), Master Agent (statewide; recruits and directs Agents and Influencers), Agents and Influencers (under each Master Agent) | Fran | Current |
 | 48 | 10-31 | Map text, state box, map notes, "Who we are looking for" heading, "Every state is open" line: regional lead, master rep, network agents | Master Distributor, Master Agent, Agents and Influencers | Fran | Current |
+| 49 | 10-31 | Stars-and-stripes opener "Distribution: The rep network: fifty states, three regions" | Removed; the Master Distributors section follows the first screen (menu links still land there) | Fran | Current |
+| 50 | 10-31 | Big "★ BASIC AMERICAN" wordmark below the doors | At the top of the first screen, above "Invest in American business" | Fran | Current |
+| 51 | 10-31 | Doors went to two per row below 860 px wide | Four side by side on computer screens and tablets (down to 520 px), one per row on phones | Fran | Current |
+| 52 | 10-31 | Doors jumped to sections or the rep form | Each door opens a panel right under the doors: brief explainer, then that door's inquiry form (Master Distributors, Master Agents, Agents, Strategic Investors). Another door swaps it; the same door or × closes it. New short investor inquiry (region, company, contact, interests; no amounts). Draft: nothing sends (`assets/doors.js`) | Fran | Current |
+| 53 | 10-31 | Opening line: "A network of professional representation in every state, and smart money behind the companies we are growing together." | "A network of technologists, professional representation, business, smart strategic capital, and the American Entrepreneurial Spirit." | Fran | Current |
+| 54 | 10-31 | White rotating card under the opening line (Reps / Companies / Investors) | Removed | Fran | Current |
 | 27 | 10-20 | Black night map of the US removed. One map only: the interactive "Find your state" map. The rep program section now runs full width with no picture; the hero "Reps" card shows the team photo instead | Fran | Current |
 
 ## Words

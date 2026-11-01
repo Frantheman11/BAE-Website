@@ -47,6 +47,7 @@ can continue the work without having heard them.
 | Landing doors | First screen is a landing page: four big doors side by side under one roof. Master Distributors, Master Agents and Agents are all-American; Strategic Investors is elegant money with a little American (Fran, 2026-10-31) |
 | Master Distributor | Heads a region (one of the three); a Master Agent heads one state. Door line: "Head a region". The door opens its own section with Fran's three questions: syndicated investment projects, dealers and distributors in one of the three regions, interest in Basic American (Fran, 2026-10-31) |
 | Master Agent | Statewide Master Agent, recruiter and director of Agents and Influencers (Fran, 2026-10-31) |
+| Door panels | Clicking a door opens a panel under the doors: brief explainer, then that door's inquiry form. Strategic Investors gets a short investor inquiry (region, company, contact, interests; no amounts; wording waits for the attorney) (Fran, 2026-10-31) |
 | Hero line "Invest in American business" | Stays until Fran's attorney reviews the investor wording, with "ROI" (Fran, 2026-10-31) |
 | BAE logo | Fran asked for new options. Three are in `review/bae-logo-options.html`: A star shield, B stripe wordmark, C seal |
 | BAI look | Red, white and blue plus black, purple and gold. New BAI logo still to make |

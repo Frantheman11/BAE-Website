@@ -38,8 +38,11 @@
     $('#slideTitle').textContent = s.t; $('#slideSub').textContent = s.s; $('#slideImg').src = s.img;
     $('#slideCount').textContent = String(si + 1).padStart(2, '0') + '/0' + slides.length;
   };
-  $('#slideNext').addEventListener('click', () => { si = (si + 1) % slides.length; showSlide(); });
-  if (!reduced) setInterval(() => { si = (si + 1) % slides.length; showSlide(); }, 5000);
+  // The card was removed from the hero (Fran, 2026-10-31); only run if it comes back
+  if ($('#slideNext')) {
+    $('#slideNext').addEventListener('click', () => { si = (si + 1) % slides.length; showSlide(); });
+    if (!reduced) setInterval(() => { si = (si + 1) % slides.length; showSlide(); }, 5000);
+  }
 
   // Reveal on scroll
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });

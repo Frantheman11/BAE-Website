@@ -11,3 +11,5 @@ required but appreciated). Chosen by Fran McGrath for the capital half of the si
 | coast-malibu-bay.jpg | Investor examples backdrop | https://unsplash.com/photos/a-view-of-a-beach-with-a-mountain-in-the-background-8TcVm9hljGI |
 | coast-mcway-cove.jpg | Incubation backdrop | https://unsplash.com/photos/aerial-photography-of-mountain-near-body-of-water-xp_rGJz_Dyk |
 | coast-malibu-golden.jpg | Let's talk photo | https://unsplash.com/photos/a-view-of-a-beach-and-a-city-from-a-hill-jV1Se0kAXlE |
+
+- logo-blockbattery.webp: Block Battery logo from blockbattery.com (block-battery-logo2.webp), downloaded 2026-11-01 with Fran's OK; Block Battery is a portfolio company.

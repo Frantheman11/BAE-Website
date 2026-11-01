@@ -96,8 +96,31 @@ can continue the work without having heard them.
 
 ## Going live (later, plan only)
 
-- Recommended: **Cloudflare Pages on Fran's own Cloudflare account**, plus a small Cloudflare
-  Worker and database for the rep list and the sign-up form. The free tier covers it.
+- **Decided (Fran, 2026-10-31): host on Vercel**, Fran's own account, signed in with GitHub
+  (Frantheman11), deployed from the BAE-Website repo with Root Directory `site` and no build step.
+  This replaces the earlier Cloudflare Pages recommendation.
+- **Done 2026-11-01:** Vercel account `fran-6000`, team `ipostsports` (Pro; Fran chose not to pay
+  for a separate BAE team, which needs its own payment method). Project `bae-website`, deployed
+  from this laptop with the Vercel CLI from the `site` folder. Address:
+  https://bae-website-psi.vercel.app (still "Concept draft", hidden from search; not on the domain).
+  Vercel could not link the GitHub repo: its GitHub login lacks access to Frantheman11/BAE-Website,
+  so there are no automatic deploys on push yet. Redeploy with `vercel deploy --prod` from `site`.
+  The CLI's `vercel link` writes a token to `site/.env.local`; delete it (no secrets in the brain).
+- **Domain records Vercel asked for (2026-11-01)**, both domains added to project `bae-website`:
+  `@` A `216.150.1.1` and `@` A `216.150.16.1` (replacing GoDaddy's `72.167.58.141`);
+  `www` CNAME `095409ac92b79add.vercel-dns-016.com` (replacing `www` → `@`).
+  Every other record (MX, TXT, SPF, autodiscover and so on) stays as it is.
+- **Keep the domain and DNS at GoDaddy.** Change only the website records (the `@` A record and the
+  `www` CNAME) to the values Vercel shows. Then cancel the GoDaddy *hosting* plan only.
+- **Do not touch the email records.** Public DNS on 2026-10-31: email is Microsoft 365 bought through
+  GoDaddy (TXT `NETORGFT12518801.onmicrosoft.com`), filtered by Proofpoint (MX `mx1/2/3-usg1.ppe-hosted.com`),
+  SPF includes `secureserver.net`. The MX and TXT records stay as they are, and the GoDaddy
+  Microsoft 365 subscription and the domain registration are not cancelled with the hosting.
+  Website today: A record `72.167.58.141` (GoDaddy hosting, the old WordPress site).
+- Before pointing the domain: attorney approves the investor wording; the forms get a real
+  destination (today they send nothing); the draft banner and "hidden from search" come off.
+- Earlier plan, kept for reference: Cloudflare Pages plus a small Worker and database for the rep
+  list and the sign-up form.
 - Domains stay at GoDaddy; only the DNS records change.
 - Rebuild clean. Never copy the old WordPress files: the old sites were hacked on GoDaddy.
 - Cancel the GoDaddy hosting only after the new site is live, and before its renewal date.

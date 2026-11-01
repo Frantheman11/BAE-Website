@@ -1,6 +1,6 @@
 /* Landing doors (Fran, 2026-10-31): clicking a door opens a panel right under the doors with a brief
    explainer, then that door's inquiry form. Clicking another door swaps the panel; the same door closes it.
-   Draft only: nothing is sent. Wording comes from the site and from Fran. */
+   Forms are sent to Fran by send.js (Web3Forms + hCaptcha). Wording comes from the site and from Fran. */
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -17,11 +17,12 @@
     </div>
     <label class="f"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>`;
   const foot = label => `
+    ${window.BAEsend ? window.BAEsend.extras() : ''}
     <div class="foot">
-      <p class="fine">Draft form: nothing is sent yet. On the live site this goes to Fran, then you pick a time for a call.</p>
+      <p class="fine">Your details go to Fran McGrath by email.</p>
       <button class="btn btn-blue" type="submit"><span class="ico">→</span> ${label}</button>
     </div>
-    <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your details now and you pick a time for a call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>`;
+    <div class="done" hidden><h4 class="display">Thank you</h4><p>Your details are on their way to Fran.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>`;
   const repPay = 'Reps earn subscription and referral commissions, plus gross margin on resale items, on the customers they bring in. Commissions are paid electronically every month.';
 
   const doors = {
@@ -105,19 +106,18 @@
   // The Capital half sits right under the doors, hidden until the Strategic Investors door opens it (Fran, 2026-10-31)
   const capital = $('#capitalPart'), invBox = $('#invForm');
 
-  const wire = form => {
+  // Each form is sent to Fran by send.js (Web3Forms + hCaptcha); its name goes in the email subject
+  const wire = (form, name) => {
+    if (window.BAEsend) window.BAEsend.prepare(form);
     $$('[data-reset]', form).forEach(b => b.addEventListener('click', () => {
       form.reset(); $('.done', form).hidden = true;
       $$('.bad', form).forEach(el => el.classList.remove('bad'));
-      $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = false);
+      $$('.foot, fieldset, .row2, form > .f, .h-captcha', form).forEach(el => el.hidden = false);
+      if (window.BAEsend) window.BAEsend.reset(form);
     }));
     form.addEventListener('submit', e => {
       e.preventDefault();
-      const missing = $$('[required]', form).filter(el => !el.value.trim() || (el.type === 'email' && !el.checkValidity()));
-      $$('.bad', form).forEach(el => el.classList.remove('bad'));
-      if (missing.length) { missing.forEach(el => el.closest('.f').classList.add('bad')); missing[0].focus(); return; }
-      $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = true);
-      $('.done', form).hidden = false;
+      if (window.BAEsend) window.BAEsend.handle(form, name);
     });
   };
 
@@ -139,7 +139,7 @@
         <h2 class="h2 display">Investor inquiry</h2>
         ${d.form}
       </form>`;
-      wire($('form', invBox));
+      wire($('form', invBox), 'Strategic Investors inquiry');
     }
     capital.hidden = false;
     $('#capital').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -166,7 +166,7 @@
     panel.hidden = false;
 
     $('.dp-x', panel).addEventListener('click', close);
-    wire($('form', panel));
+    wire($('form', panel), d.eyebrow + ' inquiry');
     panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 

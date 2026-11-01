@@ -12,20 +12,21 @@
   // The rep sign-up section was removed (Fran, 2026-10-31): rep buttons open a landing door panel instead (doors.js)
 
   const company = `
-  <section class="signup signup-companies" id="signup-companies" aria-labelledby="coTitle"><div class="wrap"><div class="form-dlg" id="coForm">
-    <form novalidate>
+  <section class="signup signup-companies" id="signup-companies" aria-labelledby="coTitle"><div class="wrap">
+    <!-- The form stays closed until this box is clicked (Fran, 2026-11-01) -->
+    <button class="co-open" type="button" aria-expanded="false" aria-controls="coForm">
       <span class="eyebrow blue">Company sign-up</span>
-      <h2 id="coTitle" class="h2 display">Companies seeking participation</h2>
-      <p class="lead">For founders who want a channel, need to raise capital, or both.</p>
+      <span id="coTitle" class="co-title display">Companies seeking participation</span>
+      <span class="co-lead">For founders who want a channel, need to raise capital, or both.</span>
+      <span class="co-plus" aria-hidden="true">+</span>
+    </button>
+    <div class="form-dlg" id="coForm" hidden>
+    <form novalidate>
 
+      <!-- Trimmed to the essentials (Fran, 2026-11-01): Website, Stage, State, Your title and Anything else removed -->
       <div class="row2">
         <label class="f"><span>Company name</span><input name="company" autocomplete="organization" required></label>
-        <label class="f"><span>Website</span><input name="website" type="url" placeholder="https://"></label>
-      </div>
-      <label class="f"><span>What you make or sell</span><input name="product" required></label>
-      <div class="row2">
-        <label class="f"><span>Stage</span><select name="stage"><option value="">Choose</option><option>Idea</option><option>Product built, early customers</option><option>Growing revenue</option><option>Established</option></select></label>
-        <label class="f"><span>State</span><select name="state"><option value="">Choose a state</option>${stateOptions}</select></label>
+        <label class="f"><span>What you make or sell</span><input name="product" required></label>
       </div>
 
       <fieldset><legend>What you need most <small>(pick any)</small></legend>
@@ -37,42 +38,46 @@
         </div>
       </fieldset>
 
-      <div class="row2">
-        <label class="f"><span>Your name</span><input name="name" autocomplete="name" required></label>
-        <label class="f"><span>Your title</span><input name="title" placeholder="Founder, CEO"></label>
-      </div>
+      <label class="f"><span>Your name</span><input name="name" autocomplete="name" required></label>
       <div class="row2">
         <label class="f"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
         <label class="f"><span>Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
       </div>
-      <label class="f"><span>Anything else</span><input name="note"></label>
 
+      ${window.BAEsend ? window.BAEsend.extras() : ''}
       <div class="foot">
-        <p class="fine">Draft form: nothing is sent yet. On the live site this goes to Fran, then you pick a time on his calendar.</p>
+        <p class="fine">Your company details go to Fran McGrath by email.</p>
         <button class="btn btn-blue" type="submit"><span class="ico">→</span> Request a call with Fran</button>
       </div>
-      <div class="done" hidden><h4 class="display">Thank you</h4><p>On the live site, Fran gets your company details now and you pick a time for a call. This draft sends nothing.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>
+      <div class="done" hidden><h4 class="display">Thank you</h4><p>Your company details are on their way to Fran.</p><button class="btn btn-ghost" type="button" data-reset>Start over</button></div>
     </form>
   </div></div></section>`;
 
   // The company form is its own section, after the #portfolio anchor (the Portfolio grid itself was removed)
   ($('#portfolio') || document.body).insertAdjacentHTML('afterend', company);
 
+  // Sent to Fran by send.js (Web3Forms + hCaptcha)
   const setup = dlg => {
     const form = $('form', dlg);
-    const reset = () => { form.reset(); $('.done', dlg).hidden = true; $$('.foot, fieldset, .row2, .f', form).forEach(el => el.hidden = false); $$('.bad', form).forEach(el => el.classList.remove('bad')); const h = $('.region-hint', dlg); if (h) h.textContent = ''; };
+    const reset = () => { form.reset(); $('.done', dlg).hidden = true; $$('.foot, fieldset, .row2, .f, .h-captcha', form).forEach(el => el.hidden = false); $$('.bad', form).forEach(el => el.classList.remove('bad')); if (window.BAEsend) window.BAEsend.reset(form); };
     $$('[data-reset]', dlg).forEach(b => b.addEventListener('click', reset));
     form.addEventListener('submit', e => {
       e.preventDefault();
-      const missing = $$('[required]', form).filter(el => !el.value.trim() || (el.type === 'email' && !el.checkValidity()));
-      $$('.bad', form).forEach(el => el.classList.remove('bad'));
-      if (missing.length) { missing.forEach(el => el.closest('.f').classList.add('bad')); missing[0].focus(); return; }
-      $$('.foot, fieldset, .row2, form > .f', form).forEach(el => el.hidden = true);
-      $('.done', dlg).hidden = false;
+      if (window.BAEsend) window.BAEsend.handle(form, 'Companies seeking participation');
     });
   };
   const coDlg = $('#coForm');
   setup(coDlg);
+
+  // The "Companies seeking participation" box opens and closes the form; the captcha loads on first open
+  const coBtn = $('.co-open');
+  const openCompanies = (open = true) => {
+    coDlg.hidden = !open;
+    coBtn.setAttribute('aria-expanded', String(open));
+    coBtn.classList.toggle('on', open);
+    if (open && window.BAEsend) window.BAEsend.prepare($('form', coDlg));
+  };
+  coBtn.addEventListener('click', () => openCompanies(coDlg.hidden));
 
   // The map remembers the state last clicked, through the "Sign up for <State>" button text
   const stateFromCta = () => {
@@ -97,6 +102,7 @@
       const code = cta && !region ? stateFromCta() : '';
       if (window.BAEdoors) window.BAEdoors.open(region ? 'md' : cta ? 'ma' : 'ag', { state: code, region });
     } else {
+      openCompanies(true);
       go($('#signup-companies'), $('input[name="company"]', coDlg));
     }
   }, true);

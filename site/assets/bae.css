@@ -887,3 +887,35 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 .signup-companies .form-dlg .chips label span { padding: 7px 12px; font-size: 14px; }
 .signup-companies .form-dlg .f > span, .signup-companies .form-dlg legend { font-size: 13px; }
 .signup-companies .form-dlg textarea { min-height: 0; }
+
+/* Map box: no "All 50 states" line until a state or region is picked (Fran, 2026-10-31) */
+#spName:empty { display: none; }
+
+/* Four doors at tablet width: room for the long Master Agents line above the stripes (2026-11-01) */
+@media (min-width: 521px) and (max-width: 860px) { .doors4 .doors-row a { min-height: 400px; padding-bottom: 104px; } }
+
+/* Forms send to Fran (2026-11-01): hidden bot trap, hCaptcha box, send error line */
+.form-dlg .h-captcha { min-height: 78px; max-width: 100%; overflow: hidden; }
+@media (max-width: 360px) { .form-dlg .h-captcha { transform: scale(.9); transform-origin: left top; } }
+.form-dlg .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-dlg .send-err { margin: 0; padding: 10px 12px; border-radius: 8px; background: #FDECEC; color: #8A1016; font-size: 14px; font-weight: 600; }
+
+/* BlackMP card (Fran, 2026-11-01): white logo on a dark tile, linked to blackmp.com; its image has wide margins */
+.line-card a.art { text-decoration: none; }
+.line-card a.art:has(img[src*="logo-blackmp"]) { padding: 6px; }
+.line-card .art img[src*="logo-blackmp"] { max-height: 98px; max-width: 70%; }
+.line-card h3 a { color: inherit; text-decoration: none; }
+.line-card h3 a:hover { text-decoration: underline; }
+
+/* Company sign-up opens from a box (Fran, 2026-11-01) */
+.co-open { display: grid; gap: 8px; width: 100%; max-width: 680px; margin: 0 auto; position: relative; text-align: left; cursor: pointer;
+  background: #fff; border: 1px solid var(--line); border-top: 8px solid var(--blue); border-radius: var(--radius-lg);
+  padding: clamp(18px, 3vw, 26px) clamp(56px, 8vw, 72px) clamp(18px, 3vw, 26px) clamp(18px, 3vw, 26px); box-shadow: 0 16px 40px rgba(14,15,19,.12); font: inherit; color: var(--ink); }
+.co-open:hover { box-shadow: 0 20px 48px rgba(14,15,19,.18); }
+.co-open .co-title { font-size: clamp(22px, 2.8vw, 32px); font-weight: 900; font-variation-settings: "wdth" 125; line-height: 1.05; text-transform: uppercase; }
+.co-open .co-lead { font-size: 15px; color: var(--mute); }
+.co-open .co-plus { position: absolute; right: clamp(16px, 3vw, 24px); top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 999px;
+  display: grid; place-items: center; background: var(--blue); color: #fff; font-size: 26px; line-height: 1; transition: transform .2s ease; }
+.co-open.on .co-plus { transform: translateY(-50%) rotate(45deg); }
+.co-open.on { border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-shadow: none; }
+.signup-companies .co-open.on + .form-dlg { border-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }

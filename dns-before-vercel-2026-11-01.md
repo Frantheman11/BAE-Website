@@ -38,3 +38,10 @@ shows the third MX and the two TXT records above. Likely also SRV records for Mi
 - `www` CNAME `basicamericanenterprises.com.` becomes `095409ac92b79add.vercel-dns-016.com.` (Vercel).
 - Nothing else changes. `admin`, `mail`, `cpanel`, `whm`, `webdisk` still point at the old
   hosting; they can be cleaned up after the GoDaddy hosting is cancelled.
+
+## Old hosting records removed (Fran, 2026-11-01)
+
+After the GoDaddy hosting was cancelled: `admin` and `mail` A records were already gone.
+Removed with Fran's yes: CNAME `cpanel`, `webdisk`, `webdisk.admin`, `whm`, `www.admin`.
+GoDaddy now lists 19 records. Website (@, www), email (MX, TXT, autodiscover, msoid,
+lyncdiscover, sip, SRV) and `email` are unchanged. Site and MX checked afterwards: fine.

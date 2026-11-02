@@ -71,7 +71,9 @@ p { margin: 0; }
 .nav .menu-btn { display: inline-flex; align-items: center; gap: 10px; background: none; border: 0; font-weight: 600; font-size: 16px; }
 .nav .menu-btn .bars { width: 22px; height: 14px; display: grid; gap: 4px; }
 .nav .menu-btn .bars i { display: block; height: 2px; background: var(--ink); border-radius: 2px; }
+.nav .admin-login { padding: 8px 14px; font-size: 14px; box-shadow: none; }
 @media (max-width: 900px) { .nav .meta { display: none; } .nav .cta { display: none; } }
+@media (max-width: 420px) { .nav .wrap { gap: 14px; } .nav .admin-login { padding: 7px 10px; font-size: 13px; } }
 
 /* Menu overlay */
 .overlay { position: fixed; inset: 0; z-index: 60; background: rgba(244,245,248,.96); display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .3s ease; }

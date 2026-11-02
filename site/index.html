@@ -45,7 +45,7 @@
   <button class="close" id="menuClose" aria-label="Close menu">×</button>
   <nav>
     <a href="#map" class="r">The map</a>
-    <a href="#capital" class="b">Smart money</a>
+    <a href="#investors" class="b">Smart money</a>
     <a href="#reps" class="r">Become a rep</a>
     <a href="#products" class="r">Products</a>
     <a href="#signup-reps" class="r">Rep sign-up</a>
@@ -82,33 +82,31 @@
       <div class="roof"><span>Basic American Enterprises</span></div>
       <p class="pick">Which door is yours?</p>
       <div class="doors-row">
-      <a class="split-dist" href="#doorPanel" data-door="md" aria-controls="doorPanel" aria-expanded="false">
+      <a class="split-dist" href="#master-distributors" data-door="md">
         <span class="sp-star">★</span>
         <span class="sp-k">Master<br>Distributors</span>
         <span class="sp-s">Head a region</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
-      <a class="split-dist" href="#doorPanel" data-door="ma" aria-controls="doorPanel" aria-expanded="false">
+      <a class="split-dist" href="#master-agents" data-door="ma">
         <span class="sp-star">★</span>
         <span class="sp-k">Master<br>Agents</span>
-        <span class="sp-s">Statewide Master Agent, recruiter and director of Agents and Influencers</span>
+        <span class="sp-s">Statewide recruiter and director of Agents and Influencers</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
-      <a class="split-dist" href="#doorPanel" data-door="ag" aria-controls="doorPanel" aria-expanded="false">
+      <a class="split-dist" href="#agents" data-door="ag">
         <span class="sp-star">★</span>
         <span class="sp-k">Agents</span>
         <span class="sp-s">Professional and social network agents</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
-      <a class="split-cap" href="#doorPanel" data-door="inv" aria-controls="doorPanel" aria-expanded="false">
+      <a class="split-cap" href="#investors" data-door="inv">
         <span class="sp-star">★</span>
         <span class="sp-k">Strategic<br>Investors</span>
         <span class="sp-s">Smart money for smart American companies</span>
         <span class="sp-go">Enter <i>→</i></span>
       </a>
       </div>
-      <!-- Door panel (Fran, 2026-10-31): filled by assets/doors.js with the door's explainer, then its inquiry form -->
-      <div class="door-panel" id="doorPanel" hidden></div>
     </div>
 
     <div class="bottom">
@@ -117,7 +115,16 @@
   </div>
 </section>
 
-<!-- CAPITAL (Fran, 2026-10-31): hidden until the Strategic Investors door opens it, right under the doors; the investor inquiry follows (doors.js) -->
+<!-- DOOR PAGES (Fran, 2026-11-01): a door opens its own page (#master-distributors, #master-agents, #agents,
+     #investors). The rest of the home page is hidden; assets/doors.js fills in the explainer and the form. -->
+<section class="door-page" id="doorPage" hidden>
+  <div class="wrap">
+    <a class="dp-back" href="#top"><span aria-hidden="true">←</span> Back to home</a>
+    <div id="doorPageBody"></div>
+  </div>
+</section>
+
+<!-- CAPITAL (Fran, 2026-10-31): the Strategic Investors page; hidden until #investors opens it; the investor inquiry follows (doors.js) -->
 <div class="capital-part" id="capitalPart" hidden>
 <!-- ============ PART TWO: CAPITAL ============ -->
 <div class="part blue coast coast-band chapter" id="capital" style="--coast:url('/assets/coast-bigsur-highway1.jpg')">
@@ -308,7 +315,7 @@
   <div class="wrap">
     <div class="top">
       <img src="assets/bae-logo.png" alt="Basic American Enterprises">
-      <nav><a href="#map">The map</a><a href="#capital">Smart money</a><a href="#reps">Become a rep</a><a href="#products">Products</a><a href="#signup-reps">Rep sign-up</a><a href="#signup-companies">Company sign-up</a><a href="#team">Team</a><a href="#talk">Let's talk</a></nav>
+      <nav><a href="#map">The map</a><a href="#investors">Smart money</a><a href="#reps">Become a rep</a><a href="#products">Products</a><a href="#signup-reps">Rep sign-up</a><a href="#signup-companies">Company sign-up</a><a href="#team">Team</a><a href="#talk">Let's talk</a></nav>
       <div class="contact"><a href="tel:+15625733200">562-573-3200</a><a href="mailto:fran@basicamericanenterprises.com">fran@basicamericanenterprises.com</a><span>Long Beach, California</span></div>
     </div>
     <div class="legal">

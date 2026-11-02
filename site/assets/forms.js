@@ -102,6 +102,7 @@
       const code = cta && !region ? stateFromCta() : '';
       if (window.BAEdoors) window.BAEdoors.open(region ? 'md' : cta ? 'ma' : 'ag', { state: code, region });
     } else {
+      if (document.body.classList.contains('door-mode')) location.hash = 'signup-companies'; // leave a door page first
       openCompanies(true);
       go($('#signup-companies'), $('input[name="company"]', coDlg));
     }

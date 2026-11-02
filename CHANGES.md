@@ -71,6 +71,8 @@ Updated 2026-10-20.
 | 90 | 11-01 | Block Battery card: "Waiting on Fran: one line" | "Power solutions for the top film production companies around the world."; also in wiki/companies/block-battery.md | Fran | Live (2026-11-01) |
 | 91 | 11-01 | Company sign-up form always open on the page | Closed behind a "Companies seeking participation" box; clicking it (or "Company sign-up" in the menu) opens the form, × closes it | Fran | Live (2026-11-01) |
 | 92 | 11-01 | Company form: 10 fields | Trimmed to company name, what you make or sell, what you need, your name, email, phone (Website, Stage, State, Your title, Anything else removed) | Fran | Live (2026-11-01) |
+| 93 | 11-01 | Master Agents door: "Statewide Master Agent, recruiter and director of Agents and Influencers"; panel heading "Statewide Master Agent" | Door and panel heading: "Statewide recruiter and director of Agents and Influencers" (the panel's repeat line removed) | Fran | Live (2026-11-01) |
+| 94 | 11-01 | A door opened a panel under the doors (investors: the Capital half) with the rest of the page still below | Each door opens its own page at its own address: #master-distributors, #master-agents, #agents, #investors. Only that explainer and its form show, under "Back to home"; the browser Back button returns to the doors. Menu "Smart money" opens #investors; the map buttons open the right door page with the state or region picked | Fran | Live (2026-11-01) |
 | 27 | 10-20 | Black night map of the US removed. One map only: the interactive "Find your state" map. The rep program section now runs full width with no picture; the hero "Reps" card shows the team photo instead | Fran | Current |
 
 ## Words

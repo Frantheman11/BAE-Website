@@ -1,11 +1,10 @@
-/* Landing doors (Fran, 2026-10-31): clicking a door opens a panel right under the doors with a brief
-   explainer, then that door's inquiry form. Clicking another door swaps the panel; the same door closes it.
-   Forms are sent to Fran by send.js (Web3Forms + hCaptcha). Wording comes from the site and from Fran. */
+/* Landing doors (Fran, 2026-10-31; own pages 2026-11-01): each door opens its own page at its own address
+   (#master-distributors, #master-agents, #agents, #investors) with a brief explainer, then that door's
+   inquiry form. Forms are sent to Fran by send.js (Web3Forms + hCaptcha). Wording comes from the site and from Fran. */
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-  const panel = $('#doorPanel');
-  if (!panel) return;
+  if (!$('#doorPage')) return;
 
   const states = (window.US_STATES || []).slice().sort((a, b) => a.name.localeCompare(b.name));
   const stateSel = `<select name="state" required><option value="">Choose a state</option>${states.map(s => `<option value="${s.code}">${s.name}</option>`).join('')}</select>`;
@@ -51,8 +50,8 @@
         ${foot('Request a call with Fran')}`
     },
     ma: {
-      tone: 'dist', eyebrow: 'Master Agents', title: 'Statewide Master Agent',
-      explain: `<p>Recruiter and director of Agents and Influencers in your state.</p><p>${repPay}</p>`,
+      tone: 'dist', eyebrow: 'Master Agents', title: 'Statewide recruiter and director of Agents and Influencers',
+      explain: `<p>${repPay}</p>`,
       form: `
         <div class="row2">
           <label class="f"><span>State</span>${stateSel}</label>
@@ -121,76 +120,96 @@
     });
   };
 
-  let open = '';
-  const mark = key => $$('.doors4 [data-door]').forEach(a => { const on = a.dataset.door === key; a.classList.toggle('on', on); a.setAttribute('aria-expanded', String(on)); });
-  const close = () => {
-    open = ''; panel.hidden = true; panel.innerHTML = '';
-    if (capital) capital.hidden = true;
-    mark('');
+  // Door pages (Fran, 2026-11-01): each door has its own address. Opening one hides the rest of the home
+  // page; only that door's explainer and form show, under a "Back to home" link. The browser's Back
+  // button returns home. Strategic Investors shows the Capital explanation, then the investor form.
+  const page = $('#doorPage'), pageBody = $('#doorPageBody');
+  const ROUTES = { 'master-distributors': 'md', 'master-agents': 'ma', 'agents': 'ag', 'investors': 'inv' };
+  const HASH = Object.fromEntries(Object.entries(ROUTES).map(([h, k]) => [k, h]));
+  let current = '';
+
+  const buildInvestors = () => {
+    if (invBox.firstChild) return;
+    const d = doors.inv;
+    invBox.innerHTML = `<form novalidate>
+      <span class="eyebrow blue">${d.eyebrow}</span>
+      <h2 class="h2 display">Investor inquiry</h2>
+      ${d.form}
+    </form>`;
+    wire($('form', invBox), 'Strategic Investors inquiry');
   };
 
-  const showCapital = () => {
-    open = 'inv'; mark('inv');
-    panel.hidden = true; panel.innerHTML = '';
-    if (!invBox.firstChild) {
-      const d = doors.inv;
-      invBox.innerHTML = `<form novalidate>
-        <span class="eyebrow blue">${d.eyebrow}</span>
-        <h2 class="h2 display">Investor inquiry</h2>
-        ${d.form}
-      </form>`;
-      wire($('form', invBox), 'Strategic Investors inquiry');
-    }
-    capital.hidden = false;
-    $('#capital').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-  const show = key => {
-    if (key === 'inv' && capital && invBox) return showCapital();
-    if (capital) capital.hidden = true;
+  const buildDoor = key => {
     const d = doors[key];
-    open = key;
-    mark(key);
-    panel.className = `door-panel dp-${d.tone}`;
-    panel.innerHTML = `
-      <button class="dp-x" type="button" aria-label="Close">×</button>
-      <div class="dp-explain">
-        <span class="eyebrow${d.tone === 'cap' ? ' blue' : ''}">${d.eyebrow}</span>
-        <h3 class="dp-title">${d.title}</h3>
-        ${d.explain}
-      </div>
-      <div class="form-dlg dp-form"><form novalidate>
-        <span class="eyebrow${d.tone === 'cap' ? ' blue' : ''}">Inquiry</span>
-        ${d.form}
-      </form></div>`;
-    panel.hidden = false;
-
-    $('.dp-x', panel).addEventListener('click', close);
-    wire($('form', panel), d.eyebrow + ' inquiry');
-    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    pageBody.innerHTML = `
+      <div class="door-panel dp-${d.tone}">
+        <div class="dp-explain">
+          <span class="eyebrow${d.tone === 'cap' ? ' blue' : ''}">${d.eyebrow}</span>
+          <h1 class="dp-title">${d.title}</h1>
+          ${d.explain}
+        </div>
+        <div class="form-dlg dp-form"><form novalidate>
+          <span class="eyebrow${d.tone === 'cap' ? ' blue' : ''}">Inquiry</span>
+          ${d.form}
+        </form></div>
+      </div>`;
+    wire($('form', pageBody), d.eyebrow + ' inquiry');
   };
 
-  // "Smart money" in the menu and footer opens the Capital half too
+  const enter = key => {
+    if (current !== key) {
+      current = key;
+      pageBody.innerHTML = '';
+      if (key === 'inv') buildInvestors(); else buildDoor(key);
+    }
+    document.body.classList.add('door-mode');
+    page.hidden = false;
+    capital.hidden = key !== 'inv';
+    document.title = `${doors[key].eyebrow} · Basic American Enterprises`;
+    window.scrollTo(0, 0);
+  };
+
+  const leave = () => {
+    const was = current;
+    current = '';
+    document.body.classList.remove('door-mode');
+    page.hidden = true; pageBody.innerHTML = '';
+    capital.hidden = true;
+    document.title = homeTitle;
+    return was;
+  };
+
+  const homeTitle = document.title;
+  const route = () => {
+    const name = decodeURIComponent(location.hash.slice(1));
+    const key = ROUTES[name];
+    if (key) return enter(key);
+    const was = current && leave();
+    const target = name && name !== 'top' && document.getElementById(name);
+    if (target) target.scrollIntoView({ block: 'start' });
+    else if (was) $('.doors4').scrollIntoView({ block: 'start' }); // back from a door page: land on the doors
+    else if (name === 'top') window.scrollTo(0, 0);
+  };
+  window.addEventListener('hashchange', route);
+  if (ROUTES[location.hash.slice(1)]) route();
+
+  // Older "#capital" links (menu and footer "Smart money") go to the investors page
   document.addEventListener('click', e => {
     const a = e.target.closest('a[href="#capital"]');
-    if (!a || a.closest('.doors4')) return;
+    if (!a) return;
     e.preventDefault();
     const x = $('#menuClose'); if (x && x.offsetParent) x.click();
-    show('inv');
+    location.hash = 'investors';
   });
 
-  $$('.doors4 [data-door]').forEach(a => a.addEventListener('click', e => {
-    e.preventDefault();
-    a.dataset.door === open ? close() : show(a.dataset.door);
-  }));
-
-  // Rep buttons elsewhere on the page open a door here (forms.js), with a state picked when the map knows it
+  // Rep buttons elsewhere on the page open a door page (forms.js), with a state or region picked when the map knows it
   window.BAEdoors = {
     open(key, { state, region } = {}) {
-      show(key);
-      const sel = state && $('select[name="state"]', panel);
+      if (location.hash.slice(1) === HASH[key]) route(); else location.hash = HASH[key];
+      enter(key);
+      const sel = state && $('select[name="state"]', pageBody);
       if (sel) sel.value = state;
-      const reg = region && $('select[name="region"]', panel);
+      const reg = region && $('select[name="region"]', pageBody);
       if (reg) reg.value = region;
     }
   };

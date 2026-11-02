@@ -919,3 +919,17 @@ dialog.form-dlg::backdrop { background: rgba(21,23,30,.5); backdrop-filter: blur
 .co-open.on .co-plus { transform: translateY(-50%) rotate(45deg); }
 .co-open.on { border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-shadow: none; }
 .signup-companies .co-open.on + .form-dlg { border-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
+
+/* Door pages (Fran, 2026-11-01): a door opens its own page; the rest of the home page is hidden */
+body.door-mode main > *:not(#doorPage):not(#capitalPart) { display: none !important; }
+.door-page[hidden] { display: none; }
+.door-page { padding: clamp(96px, 12vw, 128px) 0 clamp(28px, 4vw, 48px); background: var(--bg-2, #F4F5F8); }
+body.door-mode #capitalPart:not([hidden]) ~ * { display: none !important; }
+.dp-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; padding: 10px 16px; border-radius: 999px;
+  background: #fff; border: 1px solid var(--line-2); color: var(--ink); font-weight: 700; font-size: 15px; text-decoration: none; box-shadow: var(--shadow); }
+.dp-back:hover { border-color: var(--blue); color: var(--blue); }
+.door-page .door-panel { box-shadow: 0 24px 60px rgba(14,15,19,.12); }
+.door-page h1.dp-title { font-size: clamp(26px, 3.4vw, 40px); }
+/* Investors: the back link sits above the Capital banner */
+body.door-mode .door-page:has(#doorPageBody:empty) { padding-bottom: 0; }
+body.door-mode .door-page:has(#doorPageBody:empty) + #capitalPart #capital { margin-top: 0; }
